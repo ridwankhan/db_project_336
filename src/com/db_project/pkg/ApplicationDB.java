@@ -36,7 +36,7 @@ public class ApplicationDB {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("success");
+
 		return connection;
 		
 	}

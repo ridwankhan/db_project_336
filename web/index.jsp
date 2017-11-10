@@ -60,7 +60,10 @@
           <div class="banner-text text-center">
             <h1 class="white">Making your bar make business!</h1>
             <p>Bar Manager is your way of knowing the most about your customers and making more money</p>
-            <a href="#contact" class="btn btn-appoint">Make an Appointment.</a>
+            <a href="#contact" class="btn btn-appoint">Drinkers</a>
+              <a href="#contact" class="btn btn-appoint">Beers</a>
+              <a href="#contact" class="btn btn-appoint">Watches</a>
+
           </div>
           <div class="overlay-detail text-center">
             <a href="#service"><i class="fa fa-angle-down"></i></a>

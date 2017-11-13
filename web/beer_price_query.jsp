@@ -26,11 +26,10 @@
         String price = request.getParameter("price");
         String bar = request.getParameter("bar");
         String beer = request.getParameter("beer");
-
         //Make a SELECT query from the sells table with the price range specified by the 'price' parameter at the index.jsp
         String str = "SELECT * FROM sells WHERE bar = '" +bar+ "' AND beer = '" + beer + "'";
         //Run the query against the database.
-        out.print(str);
+      //  out.print(str);
         ResultSet result = stmt.executeQuery(str);
 
         //Make an HTML table to show the results in:

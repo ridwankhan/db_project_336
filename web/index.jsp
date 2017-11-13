@@ -91,6 +91,34 @@
         <br>
          <input type="submit" value="submit" />
         </form>
+
+          <br>
+          <form method="post" action="query.jsp">
+              <select name="price" size=1>
+                  <option value="3.0">$3.0 and under</option>
+                  <option value="5.0">$5.0 and under</option>
+                  <option value="8.0">$8.0 and under</option>
+              </select>&nbsp;<br> <input type="submit" value="submit">
+          </form>
+          <br>
+
+          <br>
+          <form method="post" action="beer_price_query.jsp">
+              <table>
+                  <tr>
+                      <td>Bar</td><td><input type="text" name="bar"></td>
+                  </tr>
+                  <tr>
+                      <td>Beer</td><td><input type="text" name="beer"></td>
+                  </tr>
+
+              </table>
+              <br>
+              <input type="submit" value="submit">
+          </form>
+          <br>
+
+
         
         
         

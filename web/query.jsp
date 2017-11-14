@@ -10,6 +10,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+<section id="service" class="section-padding">
+	<div class="container" align = 'center'>
+
+		<h2 class="ser-title">Your Beers</h2>
+		<hr class="botm-line">
 	<%
 		List<String> list = new ArrayList<String>();
 
@@ -76,6 +81,7 @@
 		} catch (Exception e) {
 		}
 	%>
+	</section>
 
 </body>
 </html>

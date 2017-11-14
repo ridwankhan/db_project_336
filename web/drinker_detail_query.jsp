@@ -23,7 +23,7 @@
 
         <h2 class="ser-title">Your Drinkers</h2>
         <hr class="botm-line">
-<%
+            <%
     List<String> list = new ArrayList<String>();
 
     try {
@@ -39,7 +39,8 @@
 
         String order = request.getParameter("order");
         //Make a SELECT query from the sells table with the price range specified by the 'price' parameter at the index.jsp
-        String str = "SELECT drinker, frequency FROM frequents WHERE bar= '" + bar+"' " + order ;
+        String str = "SELECT drinker, frequency, age,gender,tolerance, street_address,city,state, zipcode " +
+         "FROM frequents f JOIN drinkers d on f.drinker = d.name WHERE bar = '" + bar+"' " + order ;
 
         //Run the query against the database.
         ResultSet result = stmt.executeQuery(str);
@@ -56,6 +57,34 @@
         out.print("</td>");
         //make a column
         out.print("<td>");
+        out.print("Age");
+        out.print("</td>");
+
+        out.print("<td>");
+        out.print("Gender");
+        out.print("</td>");
+
+        out.print("<td>");
+        out.print("Tolerance");
+        out.print("</td>");
+
+        out.print("<td>");
+        out.print("Street Address");
+        out.print("</td>");
+
+        out.print("<td>");
+        out.print("City");
+        out.print("</td>");
+
+        out.print("<td>");
+        out.print("State");
+        out.print("</td>");
+
+        out.print("<td>");
+        out.print("Zip Code");
+        out.print("</td>");
+
+        out.print("<td>");
         out.print("Frequency");
         out.print("</td>");
         //make a column
@@ -71,8 +100,41 @@
             out.print("</td>");
 
             out.print("<td>");
+            out.print(result.getString("age"));
+            out.print("</td>");
+
+            out.print("<td>");
+            out.print(result.getString("gender"));
+            out.print("</td>");
+
+            out.print("<td>");
+            out.print(result.getString("tolerance"));
+            out.print("</td>");
+
+            out.print("<td>");
+            out.print(result.getString("street_address"));
+            out.print("</td>");
+
+            out.print("<td>");
+            out.print(result.getString("city"));
+            out.print("</td>");
+
+            out.print("<td>");
+            out.print(result.getString("state"));
+            out.print("</td>");
+
+            out.print("<td>");
+            out.print(result.getString("zipcode"));
+            out.print("</td>");
+
+
+
+            out.print("<td>");
             out.print(result.getString("frequency"));
             out.print("</td>");
+
+
+
 
             out.print("</tr>");
 
@@ -85,7 +147,7 @@
     } catch (Exception e) {
     }
 %>
-    </section>
+</section>
 
 </body>
 </html>

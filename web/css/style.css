@@ -63,6 +63,7 @@ banner
 .navbar {
     margin-bottom: 0px;
     border: 0px;
+    background: rgba(28,74,90, 0.9);
 }
 .navbar {
     border-radius: 0px;
@@ -74,6 +75,10 @@ banner
 }
 .navbar-default {
     background-color: transparent;
+    border: 0px;
+}
+.navbar-page {
+    background: rgba(28,74,90, 0.9);
     border: 0px;
 }
 .navbar {
@@ -109,6 +114,7 @@ banner
 {
 	display: block;
 }
+
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
     color: #fff;
     text-transform: uppercase;
@@ -142,7 +148,12 @@ banner
 }
 .bg-color{
 	background-color: RGBA(13, 70, 83, 0.78);
-	min-height: 650px;
+	min-height: 100px;
+}
+
+.bg-color2{
+    background-color: RGBA(13, 70, 83, 0.78);
+
 }
 .banner-info{
 	padding-top: 190px;

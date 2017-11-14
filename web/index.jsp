@@ -76,7 +76,7 @@
           <div class="banner-text text-center">
             <h1 class="white">Making your bar make business!</h1>
             <p>Bar Manager is your way of knowing the most about your customers and making more money</p>
-            <a href="#contact" class="btn btn-appoint">Drinkers</a>
+            <a href="/drinker_info.jsp" class="btn btn-appoint">Drinkers</a>
               <a href="#contact" class="btn btn-appoint">Beers</a>
               <a href="#contact" class="btn btn-appoint">Watches</a>
 
@@ -97,54 +97,54 @@
       <div class="col-md-4 col-sm-4">
         <h2 class="ser-title">Our Service</h2>
         <hr class="botm-line">
-        <form method="post" action="show.jsp">
-        <input type="radio" name="command" value="beers"/>Let's have a beer!
-        <br>
-         <input type="submit" value="submit" />
-        </form>
-        <br>
+        <%--<form method="post" action="show.jsp">--%>
+        <%--<input type="radio" name="command" value="beers"/>Let's have a beer!--%>
+        <%--<br>--%>
+         <%--<input type="submit" value="submit" />--%>
+        <%--</form>--%>
+        <%--<br>--%>
 
-          <table>
-            <tr>
-              <td>Bar</td>
-              <td><input type ="text" id ="availableBars" name ="bar"></td>
-            </tr>
-          </table>
+          <%--<table>--%>
+            <%--<tr>--%>
+              <%--<td>Bar</td>--%>
+              <%--<td><input type ="text" id ="availableBars" name ="bar"></td>--%>
+            <%--</tr>--%>
+          <%--</table>--%>
 
-          <br>
-          <form method="post" action="query.jsp">
-              <select name="price" size=1>
-                  <option value="3.0">$3.0 and under</option>
-                  <option value="5.0">$5.0 and under</option>
-                  <option value="8.0">$8.0 and under</option>
-              </select>&nbsp;<br> <input type="submit" value="submit">
-          </form>
-          <br>
+          <%--<br>--%>
+          <%--<form method="post" action="query.jsp">--%>
+              <%--<select name="price" size=1>--%>
+                  <%--<option value="3.0">$3.0 and under</option>--%>
+                  <%--<option value="5.0">$5.0 and under</option>--%>
+                  <%--<option value="8.0">$8.0 and under</option>--%>
+              <%--</select>&nbsp;<br> <input type="submit" value="submit">--%>
+          <%--</form>--%>
+          <%--<br>--%>
 
-          <br>
-          <form method="post" action="beer_price_query.jsp">
-              <table>
-                  <tr>
-                      <td>Bar</td><td><input type="text" name="bar"></td>
-                  </tr>
-                  <tr>
-                      <td>Beer</td><td><input type="text" name="beer"></td>
-                  </tr>
+          <%--<br>--%>
+          <%--<form method="post" action="beer_price_query.jsp">--%>
+              <%--<table>--%>
+                  <%--<tr>--%>
+                      <%--<td>Bar</td><td><input type="text" name="bar"></td>--%>
+                  <%--</tr>--%>
+                  <%--<tr>--%>
+                      <%--<td>Beer</td><td><input type="text" name="beer"></td>--%>
+                  <%--</tr>--%>
 
-              </table>
-              <br>
-              <input type="submit" value="submit">
-          </form>
-          <br>
+              <%--</table>--%>
+              <%--<br>--%>
+              <%--<input type="submit" value="submit">--%>
+          <%--</form>--%>
+          <%--<br>--%>
 
 
-        
-        
-        
-        
-        
-        
-        
+        <%----%>
+        <%----%>
+        <%----%>
+        <%----%>
+        <%----%>
+        <%----%>
+        <%----%>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris cillum.</p>
       </div>
       <div class="col-md-4 col-sm-4">
@@ -273,120 +273,120 @@
 </section>
 <!--/ about-->
 <!--doctor team-->
-<section id="doctor-team" class="section-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="ser-title">Meet Our Doctors!</h2>
-        <hr class="botm-line">
-      </div>
-      <div class="col-md-3 col-sm-3 col-xs-6">
-        <div class="thumbnail">
-          <img src="img/doctor1.jpg" alt="..." class="team-img">
-          <div class="caption">
-            <h3>Jessica Wally</h3>
-            <p>Doctor</p>
-            <ul class="list-inline">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 col-xs-6">
-        <div class="thumbnail">
-          <img src="img/doctor2.jpg" alt="..." class="team-img">
-          <div class="caption">
-            <h3>Iai Donas</h3>
-            <p>Doctor</p>
-            <ul class="list-inline">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 col-xs-6">
-        <div class="thumbnail">
-          <img src="img/doctor3.jpg" alt="..." class="team-img">
-          <div class="caption">
-            <h3>Amanda Denyl</h3>
-            <p>Doctor</p>
-            <ul class="list-inline">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 col-xs-6">
-        <div class="thumbnail">
-          <img src="img/doctor4.jpg" alt="..." class="team-img">
-          <div class="caption">
-            <h3>Jason Davis</h3>
-            <p>Doctor</p>
-            <ul class="list-inline">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<%--<section id="doctor-team" class="section-padding">--%>
+  <%--<div class="container">--%>
+    <%--<div class="row">--%>
+      <%--<div class="col-md-12">--%>
+        <%--<h2 class="ser-title">Meet Our Doctors!</h2>--%>
+        <%--<hr class="botm-line">--%>
+      <%--</div>--%>
+      <%--<div class="col-md-3 col-sm-3 col-xs-6">--%>
+        <%--<div class="thumbnail">--%>
+          <%--<img src="img/doctor1.jpg" alt="..." class="team-img">--%>
+          <%--<div class="caption">--%>
+            <%--<h3>Jessica Wally</h3>--%>
+            <%--<p>Doctor</p>--%>
+            <%--<ul class="list-inline">--%>
+              <%--<li><a href="#"><i class="fa fa-facebook"></i></a></li>--%>
+              <%--<li><a href="#"><i class="fa fa-twitter"></i></a></li>--%>
+              <%--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>--%>
+            <%--</ul>--%>
+          <%--</div>--%>
+        <%--</div>--%>
+      <%--</div>--%>
+      <%--<div class="col-md-3 col-sm-3 col-xs-6">--%>
+        <%--<div class="thumbnail">--%>
+          <%--<img src="img/doctor2.jpg" alt="..." class="team-img">--%>
+          <%--<div class="caption">--%>
+            <%--<h3>Iai Donas</h3>--%>
+            <%--<p>Doctor</p>--%>
+            <%--<ul class="list-inline">--%>
+              <%--<li><a href="#"><i class="fa fa-facebook"></i></a></li>--%>
+              <%--<li><a href="#"><i class="fa fa-twitter"></i></a></li>--%>
+              <%--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>--%>
+            <%--</ul>--%>
+          <%--</div>--%>
+        <%--</div>--%>
+      <%--</div>--%>
+      <%--<div class="col-md-3 col-sm-3 col-xs-6">--%>
+        <%--<div class="thumbnail">--%>
+          <%--<img src="img/doctor3.jpg" alt="..." class="team-img">--%>
+          <%--<div class="caption">--%>
+            <%--<h3>Amanda Denyl</h3>--%>
+            <%--<p>Doctor</p>--%>
+            <%--<ul class="list-inline">--%>
+              <%--<li><a href="#"><i class="fa fa-facebook"></i></a></li>--%>
+              <%--<li><a href="#"><i class="fa fa-twitter"></i></a></li>--%>
+              <%--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>--%>
+            <%--</ul>--%>
+          <%--</div>--%>
+        <%--</div>--%>
+      <%--</div>--%>
+      <%--<div class="col-md-3 col-sm-3 col-xs-6">--%>
+        <%--<div class="thumbnail">--%>
+          <%--<img src="img/doctor4.jpg" alt="..." class="team-img">--%>
+          <%--<div class="caption">--%>
+            <%--<h3>Jason Davis</h3>--%>
+            <%--<p>Doctor</p>--%>
+            <%--<ul class="list-inline">--%>
+              <%--<li><a href="#"><i class="fa fa-facebook"></i></a></li>--%>
+              <%--<li><a href="#"><i class="fa fa-twitter"></i></a></li>--%>
+              <%--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>--%>
+            <%--</ul>--%>
+          <%--</div>--%>
+        <%--</div>--%>
+      <%--</div>--%>
+    <%--</div>--%>
+  <%--</div>--%>
+<%--</section>--%>
 <!--/ doctor team-->
 <!--testimonial-->
-<section id="testimonial" class="section-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="ser-title">see what patients are saying?</h2>
-        <hr class="botm-line">
-      </div>
-      <div class="col-md-4 col-sm-4">
-        <div class="testi-details">
-          <!-- Paragraph -->
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="testi-info">
-          <!-- User Image -->
-          <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
-          <!-- User Name -->
-          <h3>Alex<span>Texas</span></h3>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-4">
-        <div class="testi-details">
-          <!-- Paragraph -->
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="testi-info">
-          <!-- User Image -->
-          <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
-          <!-- User Name -->
-          <h3>Alex<span>Texas</span></h3>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-4">
-        <div class="testi-details">
-          <!-- Paragraph -->
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="testi-info">
-          <!-- User Image -->
-          <a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>
-          <!-- User Name -->
-          <h3>Alex<span>Texas</span></h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<%--<section id="testimonial" class="section-padding">--%>
+  <%--<div class="container">--%>
+    <%--<div class="row">--%>
+      <%--<div class="col-md-12">--%>
+        <%--<h2 class="ser-title">see what patients are saying?</h2>--%>
+        <%--<hr class="botm-line">--%>
+      <%--</div>--%>
+      <%--<div class="col-md-4 col-sm-4">--%>
+        <%--<div class="testi-details">--%>
+          <%--<!-- Paragraph -->--%>
+          <%--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>--%>
+        <%--</div>--%>
+        <%--<div class="testi-info">--%>
+          <%--<!-- User Image -->--%>
+          <%--<a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>--%>
+          <%--<!-- User Name -->--%>
+          <%--<h3>Alex<span>Texas</span></h3>--%>
+        <%--</div>--%>
+      <%--</div>--%>
+      <%--<div class="col-md-4 col-sm-4">--%>
+        <%--<div class="testi-details">--%>
+          <%--<!-- Paragraph -->--%>
+          <%--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>--%>
+        <%--</div>--%>
+        <%--<div class="testi-info">--%>
+          <%--<!-- User Image -->--%>
+          <%--<a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>--%>
+          <%--<!-- User Name -->--%>
+          <%--<h3>Alex<span>Texas</span></h3>--%>
+        <%--</div>--%>
+      <%--</div>--%>
+      <%--<div class="col-md-4 col-sm-4">--%>
+        <%--<div class="testi-details">--%>
+          <%--<!-- Paragraph -->--%>
+          <%--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>--%>
+        <%--</div>--%>
+        <%--<div class="testi-info">--%>
+          <%--<!-- User Image -->--%>
+          <%--<a href="#"><img src="img/thumb.png" alt="" class="img-responsive"></a>--%>
+          <%--<!-- User Name -->--%>
+          <%--<h3>Alex<span>Texas</span></h3>--%>
+        <%--</div>--%>
+      <%--</div>--%>
+    <%--</div>--%>
+  <%--</div>--%>
+<%--</section>--%>
 <!--/ testimonial-->
 <!--cta 2-->
 <section id="cta-2" class="section-padding">
@@ -406,97 +406,97 @@
 </section>
 <!--cta-->
 <!--contact-->
-<section id="contact" class="section-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="ser-title">Contact us</h2>
-        <hr class="botm-line">
-      </div>
-      <div class="col-md-4 col-sm-4">
-        <h3>Contact Info</h3>
-        <div class="space"></div>
-        <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>321 Awesome Street<br> New York, NY 17022</p>
-        <div class="space"></div>
-        <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@companyname.com</p>
-        <div class="space"></div>
-        <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+1 800 123 1234</p>
-      </div>
-      <div class="col-md-8 col-sm-8 marb20">
-        <div class="contact-info">
-          <h3 class="cnt-ttl">Having Any Query! Or Book an appointment</h3>
-          <div class="space"></div>
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm">
-            <div class="form-group">
-              <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-              <div class="validation"></div>
-            </div>
+<%--<section id="contact" class="section-padding">--%>
+  <%--<div class="container">--%>
+    <%--<div class="row">--%>
+      <%--<div class="col-md-12">--%>
+        <%--<h2 class="ser-title">Contact us</h2>--%>
+        <%--<hr class="botm-line">--%>
+      <%--</div>--%>
+      <%--<div class="col-md-4 col-sm-4">--%>
+        <%--<h3>Contact Info</h3>--%>
+        <%--<div class="space"></div>--%>
+        <%--<p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>321 Awesome Street<br> New York, NY 17022</p>--%>
+        <%--<div class="space"></div>--%>
+        <%--<p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@companyname.com</p>--%>
+        <%--<div class="space"></div>--%>
+        <%--<p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+1 800 123 1234</p>--%>
+      <%--</div>--%>
+      <%--<div class="col-md-8 col-sm-8 marb20">--%>
+        <%--<div class="contact-info">--%>
+          <%--<h3 class="cnt-ttl">Having Any Query! Or Book an appointment</h3>--%>
+          <%--<div class="space"></div>--%>
+          <%--<div id="sendmessage">Your message has been sent. Thank you!</div>--%>
+          <%--<div id="errormessage"></div>--%>
+          <%--<form action="" method="post" role="form" class="contactForm">--%>
+            <%--<div class="form-group">--%>
+              <%--<input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />--%>
+              <%--<div class="validation"></div>--%>
+            <%--</div>--%>
+            <%--<div class="form-group">--%>
+              <%--<input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />--%>
+              <%--<div class="validation"></div>--%>
+            <%--</div>--%>
+            <%--<div class="form-group">--%>
+              <%--<input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />--%>
+              <%--<div class="validation"></div>--%>
+            <%--</div>--%>
+            <%--<div class="form-group">--%>
+              <%--<textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>--%>
+              <%--<div class="validation"></div>--%>
+            <%--</div>--%>
 
-            <div class="form-action">
-              <button type="submit" class="btn btn-form">Send Message</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <%--<div class="form-action">--%>
+              <%--<button type="submit" class="btn btn-form">Send Message</button>--%>
+            <%--</div>--%>
+          <%--</form>--%>
+        <%--</div>--%>
+      <%--</div>--%>
+    <%--</div>--%>
+  <%--</div>--%>
+<%--</section>--%>
 <!--/ contact-->
 <!--footer-->
 <footer id="footer">
-  <div class="top-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-sm-4 marb20">
-          <div class="ftr-tle">
-            <h4 class="white no-padding">About Us</h4>
-          </div>
-          <div class="info-sec">
-            <p>Praesent convallis tortor et enim laoreet, vel consectetur purus latoque penatibus et dis parturient.</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 marb20">
-          <div class="ftr-tle">
-            <h4 class="white no-padding">Quick Links</h4>
-          </div>
-          <div class="info-sec">
-            <ul class="quick-info">
-              <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
-              <li><a href="#service"><i class="fa fa-circle"></i>Service</a></li>
-              <li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 marb20">
-          <div class="ftr-tle">
-            <h4 class="white no-padding">Follow us</h4>
-          </div>
-          <div class="info-sec">
-            <ul class="social-icon">
-              <li class="bglight-blue"><i class="fa fa-facebook"></i></li>
-              <li class="bgred"><i class="fa fa-google-plus"></i></li>
-              <li class="bgdark-blue"><i class="fa fa-linkedin"></i></li>
-              <li class="bglight-blue"><i class="fa fa-twitter"></i></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%--<div class="top-footer">--%>
+    <%--<div class="container">--%>
+      <%--<div class="row">--%>
+        <%--<div class="col-md-4 col-sm-4 marb20">--%>
+          <%--<div class="ftr-tle">--%>
+            <%--<h4 class="white no-padding">About Us</h4>--%>
+          <%--</div>--%>
+          <%--<div class="info-sec">--%>
+            <%--<p>Praesent convallis tortor et enim laoreet, vel consectetur purus latoque penatibus et dis parturient.</p>--%>
+          <%--</div>--%>
+        <%--</div>--%>
+        <%--<div class="col-md-4 col-sm-4 marb20">--%>
+          <%--<div class="ftr-tle">--%>
+            <%--<h4 class="white no-padding">Quick Links</h4>--%>
+          <%--</div>--%>
+          <%--<div class="info-sec">--%>
+            <%--<ul class="quick-info">--%>
+              <%--<li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>--%>
+              <%--<li><a href="#service"><i class="fa fa-circle"></i>Service</a></li>--%>
+              <%--<li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>--%>
+            <%--</ul>--%>
+          <%--</div>--%>
+        <%--</div>--%>
+        <%--<div class="col-md-4 col-sm-4 marb20">--%>
+          <%--<div class="ftr-tle">--%>
+            <%--<h4 class="white no-padding">Follow us</h4>--%>
+          <%--</div>--%>
+          <%--<div class="info-sec">--%>
+            <%--<ul class="social-icon">--%>
+              <%--<li class="bglight-blue"><i class="fa fa-facebook"></i></li>--%>
+              <%--<li class="bgred"><i class="fa fa-google-plus"></i></li>--%>
+              <%--<li class="bgdark-blue"><i class="fa fa-linkedin"></i></li>--%>
+              <%--<li class="bglight-blue"><i class="fa fa-twitter"></i></li>--%>
+            <%--</ul>--%>
+          <%--</div>--%>
+        <%--</div>--%>
+      <%--</div>--%>
+    <%--</div>--%>
+  <%--</div>--%>
   <div class="footer-line">
     <div class="container">
       <div class="row">

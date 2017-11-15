@@ -69,8 +69,9 @@ banner
 }
 .navbar-default {
     background-color: #fff;
-    padding: 20px 0;
+    padding: 0px 0;
     transition: all 0.3s;
+
 }
 .navbar-default {
     background-color: transparent;

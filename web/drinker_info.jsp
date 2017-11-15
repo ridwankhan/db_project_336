@@ -28,8 +28,8 @@
 <body>
 <br>
 
-<div align="center" class = "bg-color ">
-    <nav class="navbar navbar-default navbar-fixed-top">
+
+    <nav class="navbar navbar-default navbar-fixed-top" style ="background-color: #0CB8B6">
         <div class="container">
             <div class="col-md-12">
                 <div class="navbar-header">
@@ -55,44 +55,44 @@
     <br>
     <br>
     <br>
-    <section>
-    <div class = "container">
-    <h1 class="ser-title">Drinkers</h1>
-    <br>
-    <p>Learn about your customers</p>
-    <hr class="botm-line">
 
-    <section>
-        <h1>Drinker Information</h1>
-        <p>Get Information About All Your Drinkers</p>
-        <form method="post" action="drinker_detail_query.jsp">
-            <table>
-                <tr>
-                    <td>Bar</td>
-                    <td><input type="text" name="bar"></td>
-                </tr>
-            </table>
-            <p>Order By: </p>
-            <select name="order" size=1>
-                <option value="ORDER BY frequency ASC">Ascending Frequency</option>
-                <option value="ORDER BY frequency DESC">Descending Frequency</option>
-                <option value="ORDER BY drinker">Alphabetical Order</option>
-            </select>&nbsp; <br><br>
-            <p>Detailed Info?</p>
-            <select name="dets" size="1">
-                <option value="TRUE">Yes</option>
-                <option value="FALSE">No</option>
-            </select>
-            <br>
-            <input type="submit" value="Submit">
-            <br>
+<section align="center">
+    <div class = "container" align="center">
+        <h1 class="ser-title">Drinkers</h1>
+        <br>
+        <p>Learn about your customers</p>
+        <hr class="botm-line">
 
-        </form>
+        <section align="center">
+            <h1>Drinker Information</h1>
+            <p>Get Information About All Your Drinkers</p>
+            <form method="post" action="drinker_detail_query.jsp">
+                <table align = "center">
+                    <tr>
+                        <td>Bar</td>
+                        <td><input type="text" name="bar"></td>
+                    </tr>
+                </table>
+                <p>Order By: </p>
+                <select name="order" size=1>
+                    <option value="ORDER BY frequency ASC">Ascending Frequency</option>
+                    <option value="ORDER BY frequency DESC">Descending Frequency</option>
+                    <option value="ORDER BY drinker">Alphabetical Order</option>
+                </select>&nbsp; <br><br>
+                <p>Detailed Info?</p>
+                <select name="dets" size="1">
+                    <option value="TRUE">Yes</option>
+                    <option value="FALSE">No</option>
+                </select>
+                <br>
+                <input type="submit" value="Submit">
+                <br>
 
-    </section>
+            </form>
+
+        </section>
     </div>
-    </section>
-</div>
+</section>
 
 </body>
 </html>

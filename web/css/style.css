@@ -149,6 +149,7 @@ banner
 .bg-color{
 	background-color: RGBA(13, 70, 83, 0.78);
 	min-height: 100px;
+    -webkit-logical-height: 700px;
 }
 
 .bg-color2{
@@ -533,3 +534,4 @@ footer
         font-size: 24px;
     }
 }
+

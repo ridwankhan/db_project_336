@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -64,12 +65,17 @@
 
     <section>
         <h1>Drinker Information</h1>
+        <%
+            String barName = request.getParameter("idJob");
+            session.setAttribute("ob", barName);
+
+        %>
         <p>Get Information About All Your Drinkers</p>
         <form method="post" action="drinker_detail_query.jsp">
             <table>
                 <tr>
                     <td>Bar</td>
-                    <td><input type="text" name="bar"></td>
+                    <td><input type="text" name="bar" value= "<%=barName%>"</td>
                 </tr>
             </table>
             <p>Order By: </p>

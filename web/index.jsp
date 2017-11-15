@@ -65,7 +65,7 @@
           <div class="banner-text text-center">
             <h1 class="white">Making your bar make business!</h1>
 
-            <form method="post" action="drinker_info.jsp">
+            <form method="post" action="barhome.jsp">
 
               <%
                 try {
@@ -85,7 +85,7 @@
               <h2 class = "white"> Bar Login </h2>
               <br>
 
-                <select style = "
+                <select name = "bar" style = "
                         font-family: 'Candal', sans-serif;
                         background: border-box;
                         text-align-last: center;

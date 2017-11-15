@@ -33,28 +33,10 @@
     <br>
     <p>Learn about your customers</p>
     <hr class="botm-line">
-    <section>
-    <h1>All my drinkers</h1>
-        <p>This is to see who the drinkers who visit your bar are and how many times in the last year they have visited.</p>
-    <form method="post" action="drinker_query.jsp">
-        <table>
-            <tr>
-                <td>Bar</td>
-                <td><input type="text" name="bar"></td>
-            </tr>
-        </table>
-        <p>Order By: </p>
-        <select name="order" size=1>
-        <option value="ORDER BY frequency ASC">Ascending Frequency</option>
-        <option value="ORDER BY frequency DESC">Descending Frequency</option>
-        <option value="ORDER BY drinker">Alphabetical Order</option>
-        </select>&nbsp; <br><br> <input type="submit" value="Submit">
-    </form>
-    </section>
-    <hr class="botm-line">
+
     <section>
         <h1>Drinker Information</h1>
-        <p>Get Detail Information About All Your Drinkers</p>
+        <p>Get Information About All Your Drinkers</p>
         <form method="post" action="drinker_detail_query.jsp">
             <table>
                 <tr>
@@ -67,7 +49,16 @@
                 <option value="ORDER BY frequency ASC">Ascending Frequency</option>
                 <option value="ORDER BY frequency DESC">Descending Frequency</option>
                 <option value="ORDER BY drinker">Alphabetical Order</option>
-            </select>&nbsp; <br><br> <input type="submit" value="Submit">
+            </select>&nbsp; <br><br>
+            <p>Detailed Info?</p>
+            <select name="dets" size="1">
+                <option value="TRUE">Yes</option>
+                <option value="FALSE">No</option>
+            </select>
+            <br>
+            <input type="submit" value="Submit">
+            <br>
+
         </form>
 
     </section>

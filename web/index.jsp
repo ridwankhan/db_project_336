@@ -76,7 +76,7 @@
           <div class="banner-text text-center">
             <h1 class="white">Making your bar make business!</h1>
             <p>Bar Manager is your way of knowing the most about your customers and making more money</p>
-            <a href="/drinker_info.jsp" class="btn btn-appoint">Drinkers</a>
+            <a href="./drinker_info.jsp" class="btn btn-appoint">Drinkers</a>
               <a href="#contact" class="btn btn-appoint">Beers</a>
               <a href="#contact" class="btn btn-appoint">Watches</a>
 

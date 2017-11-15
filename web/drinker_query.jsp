@@ -38,6 +38,7 @@
         String bar = request.getParameter("bar");
 
         String order = request.getParameter("order");
+
         //Make a SELECT query from the sells table with the price range specified by the 'price' parameter at the index.jsp
         String str = "SELECT drinker, frequency FROM frequents WHERE bar= '" + bar+"' " + order ;
 

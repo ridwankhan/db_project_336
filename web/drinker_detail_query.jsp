@@ -24,6 +24,10 @@
 
         <h2 class="ser-title">Your Drinkers</h2>
         <hr class="botm-line">
+
+            <%
+                String barName = (String) session.getAttribute("ob");
+%>
             <%
     List<String> list = new ArrayList<String>();
 
@@ -43,7 +47,7 @@
         String dets = request.getParameter("dets");
         //Make a SELECT query from the sells table with the price range specified by the 'price' parameter at the barhomebarhome.jsp
         String str = "SELECT drinker, frequency, age,gender,tolerance, street_address,city,state, zipcode " +
-         "FROM frequents f JOIN drinkers d on f.drinker = d.name WHERE bar = '" + bar+"' " + order ;
+         "FROM frequents f JOIN drinkers d on f.drinker = d.name WHERE bar = '" + barName+"' " + order ;
 
         //Run the query against the database.
         ResultSet result = stmt.executeQuery(str);

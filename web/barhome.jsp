@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1 " import="com.db_project.pkg.*"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
@@ -33,7 +33,7 @@
 <!--banner-->
 <section id="banner" class="banner">
   <div class="bg-color">
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" style >
       <div class="container">
         <div class="col-md-12">
           <div class="navbar-header">
@@ -64,60 +64,11 @@
           </div>
           <div class="banner-text text-center">
             <h1 class="white">Making your bar make business!</h1>
+            <p>Bar Manager is your way of knowing the most about your customers and making more money</p>
+            <a href="./drinker_info.jsp" class="btn btn-appoint">Drinkers</a>
+              <a href="#contact" class="btn btn-appoint">Beers</a>
+              <a href="#contact" class="btn btn-appoint">Watches</a>
 
-            <form method="post" action="drinker_info.jsp">
-
-              <%
-                try {
-                  //Get the database connection
-                  ApplicationDB db = new ApplicationDB();
-                  Connection con = db.getConnection();
-
-                  //Create a SQL statement
-                  Statement stmt = con.createStatement();
-
-                  String entity = request.getParameter("command");
-
-                  String str = "SELECT * FROM bars";
-                  //Run the query against the database.
-                  ResultSet rs = stmt.executeQuery(str);
-              %>
-              <h2 class = "white"> Bar Login </h2>
-              <br>
-
-                <select style = "
-                        font-family: 'Candal', sans-serif;
-                        background: border-box;
-                        text-align-last: center;
-                        width: 70%;
-                        -webkit-box-align: center;
-                ">
-
-                  <%
-                    while(rs.next())
-                    {
-                      String fname = rs.getString("name");
-                  %>
-
-                  <option value="<%=fname %>"><%=fname %></option>
-
-                  <%
-                    }
-
-                  %>
-
-                </select>
-
-              <%
-                }
-                catch (Exception e) {
-                  out.print(e);
-                }
-
-              %>
-              <br>
-              <input type="submit" value="submit" class="btn btn-appoint">
-            </form>
           </div>
           <div class="overlay-detail text-center">
             <a href="#service"><i class="fa fa-angle-down"></i></a>
@@ -135,8 +86,6 @@
       <div class="col-md-4 col-sm-4">
         <h2 class="ser-title">Our Service</h2>
         <hr class="botm-line">
-
-
         <%--<form method="post" action="show.jsp">--%>
         <%--<input type="radio" name="command" value="beers"/>Let's have a beer!--%>
         <%--<br>--%>

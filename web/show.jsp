@@ -43,9 +43,9 @@
 
 			//Create a SQL statement
 			Statement stmt = con.createStatement();
-			//Get the selected radio button from the index.jsp
+			//Get the selected radio button from the barhome.jsp
 			String entity = request.getParameter("command");
-			//Make a SELECT query from the table specified by the 'command' parameter at the index.jsp
+			//Make a SELECT query from the table specified by the 'command' parameter at the barhome.jsp
 			String str = "SELECT * FROM " + entity;
 			//Run the query against the database.
 			ResultSet result = stmt.executeQuery(str);

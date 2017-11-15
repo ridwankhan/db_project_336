@@ -141,9 +141,12 @@ banner
     position: relative;
 }
 .bg-color{
-    background-color: RGBA(13, 70, 83, 0.78);
-    min-height: 650px;
+
+	background-color: RGBA(13, 70, 83, 0.78);
+	min-height: 100px;
+    -webkit-logical-height: 700px;
 }
+
 .banner-info{
     padding-top: 190px;
 }
@@ -522,3 +525,4 @@ footer
         font-size: 24px;
     }
 }
+

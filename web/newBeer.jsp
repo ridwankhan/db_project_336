@@ -80,7 +80,7 @@
 		;
 		System.out.println(updateBeer + "   " + updateBar);
 		if (updateBeer > 0) {
-			//Create a dynamic HTML form for beer update if needed. The form is not going to show up if the beer specified at index.jsp already exists in the database.
+			//Create a dynamic HTML form for beer update if needed. The form is not going to show up if the beer specified at barhome.jsp already exists in the database.
 			out.print("Beer " + newBeer + " details: <br>");
 			out.print("<form method=\"post\" action=\"newBeerDetails.jsp\">"
 					+ "<table> <tr>	<td>Manf</td><td><input type=\"text\" name=\"manufacturer\"></td>   	</tr>"

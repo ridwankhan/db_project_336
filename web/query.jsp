@@ -26,9 +26,9 @@
 			
 			//Create a SQL statement
 			Statement stmt = con.createStatement();
-			//Get the combobox from the index.jsp
+			//Get the combobox from the barhomebarhome.jsp
 			String entity = request.getParameter("price");
-			//Make a SELECT query from the sells table with the price range specified by the 'price' parameter at the index.jsp
+			//Make a SELECT query from the sells table with the price range specified by the 'price' parameter at the barhomebarhome.jsp
 			String str = "SELECT * FROM sells WHERE price <= " + entity;
 			//Run the query against the database.
 			ResultSet result = stmt.executeQuery(str);

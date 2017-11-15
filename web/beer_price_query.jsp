@@ -22,11 +22,11 @@
 
         //Create a SQL statement
         Statement stmt = con.createStatement();
-        //Get the combobox from the index.jsp
+
         String price = request.getParameter("price");
         String bar = request.getParameter("bar");
         String beer = request.getParameter("beer");
-        //Make a SELECT query from the sells table with the price range specified by the 'price' parameter at the index.jsp
+        //Make a SELECT query from the sells table with the price range specified by the 'price' parameter at the barhome.jsp
         String str = "SELECT * FROM sells WHERE bar = '" +bar+ "' AND beer = '" + beer + "'";
         //Run the query against the database.
       //  out.print(str);

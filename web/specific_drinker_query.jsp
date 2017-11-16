@@ -39,10 +39,9 @@
 
         //Create a SQL statement
         Statement stmt = con.createStatement();
-        //Get the combobox from the barhomebarhome.jsp
-        String bar = request.getParameter("bar");
 
         String drinker = request.getParameter("drinker");
+        String order = request.getParameter("order");
         //Make a SELECT query from the sells table with the price range specified by the 'price' parameter at the barhomebarhome.jsp
         String str = "SELECT drinker, frequency, age,gender,tolerance, street_address,city,state, zipcode " +
          "FROM frequents f JOIN drinkers d on f.drinker = d.name WHERE bar = '" + barName+"' AND drinker = '"+drinker+"' ";
@@ -50,7 +49,6 @@
 
         //Run the query against the database.
         ResultSet result = stmt.executeQuery(str);
-        out.print(result);
 
         //Make an HTML table to show the results in:
         out.print("<table>");
@@ -171,9 +169,10 @@
         out.print("</table>");
         con.close();
 
+        out.print("<br><br>");
          Connection con2 = db.getConnection();
-        String str2 = "SELECT beer,rating FROM likes WHERE drinker = '"+drinker+"'";
-         out.print(str2);
+        String str2 = "SELECT beer,rating FROM likes WHERE drinker = '"+drinker+"' " + order;
+
         Statement stmt2 = con2.createStatement();
 
         ResultSet result2 = stmt2.executeQuery(str2);
@@ -199,16 +198,15 @@
 
 
          while (result2.next()) {
-             out.print("here");
             //make a row
             out.print("<tr>");
             //make a column
             out.print("<td>");
-            out.print(result.getString("beer"));
+            out.print(result2.getString("beer"));
             out.print("</td>");
 
             out.print("<td>");
-            out.print(result.getString("rating"));
+            out.print(result2.getString("rating"));
             out.print("</td>");
 
              out.print("</tr>");

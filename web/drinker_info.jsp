@@ -161,7 +161,16 @@
 
                             %>
                         </p>
+                        <p style="float:left;margin-left:25px;">Order By:
+                            <select name ="order" size =1>
+                                <option value="ORDER BY rating ASC">Ascending rating</option>
+                                <option value="ORDER BY rating DESC">Descending rating</option>
+                                <option value="ORDER BY beer">Alphabetical Order</option>
 
+                            </select>
+                        </p>
+
+                        <br>
                         <br>
                         <br>
                         <br>

@@ -5,7 +5,10 @@
   Time: 2:23 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1 " import="com.db_project.pkg.*"
+         pageEncoding="ISO-8859-1"%>
+<%@ page import="java.io.*,java.util.*,java.sql.*"%>
+<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
 <html>
 <head>
@@ -64,7 +67,22 @@
         String barName = request.getParameter("idJob");
         session.setAttribute("ob", barName);
 
+        try {
+            //Get the database connection
+            ApplicationDB db = new ApplicationDB();
+            Connection con = db.getConnection();
+
+            //Create a SQL statement
+            Statement stmt = con.createStatement();
+
+            String entity = request.getParameter("command");
+
+            String str = "SELECT drinker FROM frequents WHERE bar = '"+barName+"'"+" ORDER BY drinker";
+            //Run the query against the database.
+            ResultSet rs = stmt.executeQuery(str);
+
     %>
+
     <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
@@ -107,11 +125,49 @@
             <div class="card h-100">
 
                 <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Project Two</a>
+                    <h4 class="card-title" align="center">
+                        Specific Drinker
                     </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod
-                        odio, gravida pellentesque urna varius vitae.</p>
+
+                    <p align="center">Get the Information about a particular drinker, and what they like to drink</p>
+                    <form method="post" action="specific_drinker_query.jsp" align="center">
+                        <table>
+
+                            <p>Bar: <%=barName%>
+                            </p>
+                        </table>
+                        <p style="float:left;margin-left:25px;">Name:
+                            <select name="drinker" size=1>
+                                <%
+                                    while(rs.next())
+                                    {
+                                        String fname = rs.getString("drinker");
+                                %>
+
+                                <option value="<%=fname %>"><%=fname %></option>
+
+                                <%
+                                    }
+
+                                %>
+
+                            </select>
+
+                            <%
+                                }
+                                catch (Exception e) {
+                                    out.print(e);
+                                }
+
+                            %>
+                        </p>
+
+                        <br>
+                        <br>
+                        <br>
+                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <br>
+                    </form>
                 </div>
             </div>
         </div>

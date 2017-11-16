@@ -116,7 +116,7 @@
 
               %>
               <br>
-              <input type="submit" value="submit" class="btn btn-appoint">
+              <input type="submit" value="Submit" class="btn btn-appoint">
             </form>
           </div>
           <div class="overlay-detail text-center">

@@ -99,7 +99,7 @@
         out.print("</td>");
 
 
-
+         out.print("</tr>");
 
         //parse out the results
         while (result.next()) {

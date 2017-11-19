@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Drinkers</title>
+    <title>Sells</title>
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
     <meta name="keywords"
           content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
@@ -22,7 +22,7 @@
 <section id="service" class="section-padding">
     <div class="container" align='center'>
 
-        <h2 class="ser-title">Your Drinkers</h2>
+        <h2 class="ser-title">Beers And Prices</h2>
         <hr class="botm-line">
 
             <%
@@ -39,14 +39,20 @@
 
         //Create a SQL statement
         Statement stmt = con.createStatement();
-        //Get the combobox from the barhomebarhome.jsp
+
+        String manu = request.getParameter("manu");
+        //out.print(manu);
 
         String order = request.getParameter("order");
-
-        String dets = request.getParameter("dets");
         //Make a SELECT query from the sells table with the price range specified by the 'price' parameter at the barhomebarhome.jsp
-        String str = "SELECT drinker, frequency, age,gender,tolerance, street_address,city,state, zipcode " +
-         "FROM frequents f JOIN drinkers d on f.drinker = d.name WHERE bar = '" + barName+"' " + order ;
+        String str;
+        if (manu.equals("TRUE")) {
+            str = "SELECT * FROM sells s JOIN beers b ON s.beer = b.name WHERE s.bar= '"+barName+"' "+order;
+        }
+        else{
+             str = "SELECT * FROM sells WHERE bar= '"+barName+"' "+order;
+             }
+        out.print(str);
 
         //Run the query against the database.
         ResultSet result = stmt.executeQuery(str);
@@ -59,54 +65,31 @@
         //make a column
         out.print("<td>");
         //print out column header
-        out.print("Drinker");
+        out.print("Beer");
         out.print("</td>");
         //make a column
 
-        if(dets.equals("TRUE")) {
-        out.print("<td>");
-        out.print("Age");
-        out.print("</td>");
-}
-if(dets.equals("TRUE")){
-        out.print("<td>");
-        out.print("Gender");
-        out.print("</td>");
-}
 
-if(dets.equals("TRUE")) {
         out.print("<td>");
-        out.print("Tolerance");
+        out.print("Price");
         out.print("</td>");
-}
 
-if(dets.equals("TRUE")) {
-        out.print("<td>");
-        out.print("Street Address");
-        out.print("</td>");
-}
+        if (manu.equals("TRUE")){
+             out.print("<td>");
+            out.print("Manufacturer");
+            out.print("</td>");
 
-if(dets.equals("TRUE")){
-        out.print("<td>");
-        out.print("City");
-        out.print("</td>");
-}
-
-if(dets.equals("TRUE")){
-        out.print("<td>");
-        out.print("State");
-        out.print("</td>");
-        }
-if(dets.equals("TRUE")) {
-        out.print("<td>");
-        out.print("Zip Code");
-        out.print("</td>");
         }
 
-        out.print("<td>");
-        out.print("Frequency");
-        out.print("</td>");
-        //make a column
+        if (manu.equals("TRUE")){
+            out.print("<td>");
+            out.print("Manufacturer Price");
+            out.print("</td>");
+
+        }
+
+
+
         out.print("</tr>");
 
         //parse out the results
@@ -115,59 +98,29 @@ if(dets.equals("TRUE")) {
             out.print("<tr>");
             //make a column
             out.print("<td>");
-            out.print(result.getString("drinker"));
+            out.print(result.getString("Beer"));
             out.print("</td>");
 
-            if(dets.equals("TRUE")){
-            out.print("<td>");
-            out.print(result.getString("age"));
-            out.print("</td>");
-            }
-
-            if(dets.equals("TRUE")){
-            out.print("<td>");
-            out.print(result.getString("gender"));
-            out.print("</td>");
-            }
-
-if(dets.equals("TRUE")){
-            out.print("<td>");
-            out.print(result.getString("tolerance"));
-            out.print("</td>");
-            }
-
-if(dets.equals("TRUE")){
-            out.print("<td>");
-            out.print(result.getString("street_address"));
-            out.print("</td>");
-            }
-
-if(dets.equals("TRUE")){
-            out.print("<td>");
-            out.print(result.getString("city"));
-            out.print("</td>");
-            }
-if(dets.equals("TRUE")){
-            out.print("<td>");
-            out.print(result.getString("state"));
-            out.print("</td>");
-            }
-
-if(dets.equals("TRUE")){
-            out.print("<td>");
-            if(Integer.parseInt(result.getString("zipcode"))<10000){
-                out.print("0"+result.getString("zipcode"));
-
-            }
-            else
-                out.print(result.getString("zipcode"));
-            out.print("</td>");
-            }
 
             out.print("<td>");
-            out.print(result.getString("frequency"));
+
+            out.print("$"+result.getString("price"));
+
             out.print("</td>");
 
+            if (manu.equals("TRUE")){
+             out.print("<td>");
+            out.print(result.getString("manf"));
+            out.print("</td>");
+
+        }
+
+        if (manu.equals("TRUE")){
+            out.print("<td>");
+            out.print("$"+result.getString("retailprice"));
+            out.print("</td>");
+
+        }
 
 
 

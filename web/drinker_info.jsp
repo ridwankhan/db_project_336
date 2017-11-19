@@ -88,7 +88,7 @@
             <div class="card h-100">
                 <div class="card-body">
                     <h4 class="card-title" align="center">
-                        All Drinkers
+                        All Your Drinkers
                     </h4>
 
                     <p align="center">Get Information About All Your Drinkers</p>
@@ -184,12 +184,25 @@
             <div class="card h-100">
 
                 <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">Project Three</a>
+                    <h4 class="card-title" align="center">
+                        Possible Customers
                     </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error
-                        quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure
-                        perspiciatis mollitia recusandae vero vel quam!</p>
+
+                    <p align="center">Customers who are in the same state as your bar, but aren't your customers, yet.</p>
+                    <form method="post" action="noncustomer_query.jsp" align="center">
+                        <table>
+
+                            <p>Bar: <%=barName%>
+                            </p>
+                        </table>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <br>
+                    </form>
                 </div>
             </div>
         </div>

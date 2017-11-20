@@ -14,7 +14,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Drinkers</title>
+    <title>Watches</title>
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
     <meta name="keywords"
           content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
@@ -62,7 +62,7 @@
 <br>
 
 <section>
-    <h1 align="center">Drinker Information</h1>
+    <h1 align="center">Beer Information</h1>
     <%
         String barName = request.getParameter("idJob");
         session.setAttribute("ob", barName);
@@ -77,7 +77,7 @@
 
             String entity = request.getParameter("command");
 
-            String str = "SELECT drinker FROM frequents WHERE bar = '"+barName+"'"+" ORDER BY drinker";
+            String str = "SELECT beer FROM sells WHERE bar = '"+barName+"'"+" ORDER BY beer";
             //Run the query against the database.
             ResultSet rs = stmt.executeQuery(str);
 
@@ -88,11 +88,11 @@
             <div class="card h-100">
                 <div class="card-body">
                     <h4 class="card-title" align="center">
-                        All Your Drinkers
+                        Beers You Sell
                     </h4>
 
-                    <p align="center">Get Information About All Your Drinkers</p>
-                    <form method="post" action="drinker_detail_query.jsp" align="center">
+                    <p align="center">The Beers You Sell and Their Price</p>
+                    <form method="post" action="beer_sells_query.jsp" align="center">
                         <table>
 
                             <p>Bar: <%=barName%>
@@ -100,16 +100,17 @@
                         </table>
                         <p style="float:left;margin-left:25px;">Order By: &nbsp
                             <select name="order" size=1>
-                                <option value="ORDER BY frequency ASC">Ascending Frequency</option>
-                                <option value="ORDER BY frequency DESC">Descending Frequency</option>
-                                <option value="ORDER BY drinker">Alphabetical Order</option>
+                                <option value="ORDER BY beer">Alphabetical Order</option>
+                                <option value="ORDER BY price ASC">Price Ascending</option>
+                                <option value="ORDER BY price DESC">Price Descending</option>
+
                             </select>
                         </p>
                         <br>
-                        <p style="float:left;margin-left:25px;">Detailed Info?&nbsp
-                            <select name="dets" size="1">
-                                <option value="TRUE">Yes</option>
+                        <p style="float:left;margin-left:25px;">Manufacturer&nbsp
+                            <select name="manu" size="1">
                                 <option value="FALSE">No</option>
+                                <option value="TRUE">Yes</option>
                             </select>
                         </p>
                         <br>
@@ -126,22 +127,22 @@
 
                 <div class="card-body">
                     <h4 class="card-title" align="center">
-                        Specific Drinker
+                        Who likes this beer?
                     </h4>
 
-                    <p align="center">Get the Information about a particular drinker, and what they like to drink</p>
-                    <form method="post" action="specific_drinker_query.jsp" align="center">
+                    <p align="center">Find out which of your customers like a certain beer.</p>
+                    <form method="post" action="who_likes_query.jsp" align="center">
                         <table>
 
                             <p>Bar: <%=barName%>
                             </p>
                         </table>
                         <p style="float:left;margin-left:25px;">Name:
-                            <select name="drinker" size=1>
+                            <select name="beer" size=1>
                                 <%
                                     while(rs.next())
                                     {
-                                        String fname = rs.getString("drinker");
+                                        String fname = rs.getString("beer");
                                 %>
 
                                 <option value="<%=fname %>"><%=fname %></option>
@@ -185,10 +186,10 @@
 
                 <div class="card-body">
                     <h4 class="card-title" align="center">
-                        Possible Customers
+                        Possible New Beers
                     </h4>
 
-                    <p align="center">Customers who are in the same state as your bar, but aren't your customers, yet.</p>
+                    <p align="center">Beers You Don't Sell, but your customers like</p>
                     <form method="post" action="noncustomer_query.jsp" align="center">
                         <table>
 

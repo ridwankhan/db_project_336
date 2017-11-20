@@ -42,8 +42,7 @@
         //Get the combobox from the barhome.jsp
 
         //Make a SELECT query from the sells table with the price range specified by the 'price' parameter at the barhomebarhome.jsp
-        String str = "Select  FROM frequents f JOIN likes l ON  WHERE b.name = '"+barName+
-        "' AND b.state= d.state AND d.name NOT IN(Select s.beer FROM sells s WHERE s.bar='"+barName+"')";
+        String str = "SELECT distint(beer) FROM likes l JOIN frequents f WHERE l.drinker = f.drinker AND f.bar = '"+barName+"' AND l.beer NOT IN(Select s.beer FROM sells s WHERE s.bar='"+barName+"')";
         //out.print(str);
 
         //Run the query against the database.

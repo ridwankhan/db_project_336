@@ -77,7 +77,7 @@
 
             String entity = request.getParameter("command");
 
-            String str = "SELECT drinker FROM frequents WHERE bar = '"+barName+"'"+" ORDER BY drinker";
+            String str = "SELECT beer FROM sells WHERE bar = '"+barName+"'"+" ORDER BY beer";
             //Run the query against the database.
             ResultSet rs = stmt.executeQuery(str);
 
@@ -127,22 +127,22 @@
 
                 <div class="card-body">
                     <h4 class="card-title" align="center">
-                        Specific Drinker
+                        Who likes this beer?
                     </h4>
 
-                    <p align="center">Get the Information about a particular drinker, and what they like to drink</p>
-                    <form method="post" action="specific_drinker_query.jsp" align="center">
+                    <p align="center">Find out which of your customers like a certain beer.</p>
+                    <form method="post" action="who_likes_query.jsp" align="center">
                         <table>
 
                             <p>Bar: <%=barName%>
                             </p>
                         </table>
                         <p style="float:left;margin-left:25px;">Name:
-                            <select name="drinker" size=1>
+                            <select name="beer" size=1>
                                 <%
                                     while(rs.next())
                                     {
-                                        String fname = rs.getString("drinker");
+                                        String fname = rs.getString("beer");
                                 %>
 
                                 <option value="<%=fname %>"><%=fname %></option>
@@ -186,10 +186,10 @@
 
                 <div class="card-body">
                     <h4 class="card-title" align="center">
-                        Possible Customers
+                        Possible New Beers
                     </h4>
 
-                    <p align="center">Customers who are in the same state as your bar, but aren't your customers, yet.</p>
+                    <p align="center">Beers You Don't Sell, but your customers like</p>
                     <form method="post" action="noncustomer_query.jsp" align="center">
                         <table>
 

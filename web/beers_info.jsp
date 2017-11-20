@@ -190,7 +190,7 @@
                     </h4>
 
                     <p align="center">Beers You Don't Sell, but your customers like</p>
-                    <form method="post" action="noncustomer_query.jsp" align="center">
+                    <form method="post" action="not_sell_beer.jsp" align="center">
                         <table>
 
                             <p>Bar: <%=barName%>

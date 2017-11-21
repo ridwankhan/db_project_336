@@ -209,8 +209,8 @@
         </div>
 
     </div>
-    <!-- /.row -->
 
+    <!-- /.row -->
 
 </section>
 </div>

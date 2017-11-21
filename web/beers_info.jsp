@@ -71,15 +71,23 @@
             //Get the database connection
             ApplicationDB db = new ApplicationDB();
             Connection con = db.getConnection();
+            Connection con2 = db.getConnection();
+            Connection con3 = db.getConnection();
 
             //Create a SQL statement
             Statement stmt = con.createStatement();
+            Statement stmt2 = con2.createStatement();
+            Statement stmt3 = con3.createStatement();
 
             String entity = request.getParameter("command");
 
             String str = "SELECT beer FROM sells WHERE bar = '"+barName+"'"+" ORDER BY beer";
+            String str2 = "SELECT beer FROM sells WHERE bar = '"+barName+"'"+" ORDER BY beer";
+            String str3 = "SELECT beer FROM sells WHERE bar = '"+barName+"'"+" ORDER BY beer";
             //Run the query against the database.
             ResultSet rs = stmt.executeQuery(str);
+            ResultSet rs2 = stmt2.executeQuery(str2);
+            ResultSet rs3 = stmt3.executeQuery(str3);
 
     %>
 
@@ -154,13 +162,7 @@
 
                             </select>
 
-                            <%
-                                }
-                                catch (Exception e) {
-                                    out.print(e);
-                                }
 
-                            %>
                         </p>
                         <p style="float:left;margin-left:25px;">Order By:
                             <select name ="order" size =1>
@@ -210,6 +212,149 @@
 
     </div>
     <!-- /.row -->
+
+    <div class="row">
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title" align="center">
+                        Update Your Beer Price!
+                    </h4>
+
+
+                    <form method="post" action="updatedBeer.jsp" align="center">
+
+
+                            <p>Bar: <%=barName%></p>
+
+                        <p style="float:left;margin-left:25px;">Beer:
+                                <select name="beer2" size=1>
+                                    <%
+                                        while(rs2.next())
+                                        {
+                                            String fname = rs2.getString("beer");
+                                    %>
+
+                                    <option value="<%=fname %>"><%=fname %></option>
+
+                                    <%
+                                        }
+
+                                    %>
+
+                                </select>
+
+
+                        </p>
+                        <br>
+
+                        <p style="float:left;margin-left:25px;">Price
+                            <input type="text" name="price2"></td>
+                        </p>
+
+                        <br>
+                        <br>
+                        <br>
+
+
+                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <br>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+
+                <div class="card-body">
+
+                    <h4 class="card-title" align="center">
+                        Add New Beers to Sell!
+                    </h4>
+
+
+                    <form method="post" action="newBeer.jsp" align="center">
+
+
+                            <p>Bar: <%=barName%></p>
+
+                        <p style="float:left;margin-left:25px;">Beer: <input type="text" name="beer1"></p>
+
+                        <p style="float:left;margin-left:25px;">Price:<input type="text" name="price1"></p>
+
+                        <br>
+                        <br>
+
+                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <br>
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+
+                <div class="card-body">
+
+                    <h4 class="card-title" align="center">
+                        You want to stop selling a beer? Choose Below!
+                    </h4>
+
+
+                    <form method="post" action="deletedBeer.jsp" align="center">
+
+
+                        <p>Bar: <%=barName%></p>
+
+                        <p style="float:left;margin-left:25px;">Beer:
+                            <select name="beer3" size=1>
+                                <%
+                                    while(rs3.next())
+                                    {
+                                        String fname = rs3.getString("beer");
+                                %>
+
+                                <option value="<%=fname %>"><%=fname %></option>
+
+                                <%
+                                    }
+
+                                %>
+
+                            </select>
+
+                            <%
+                                }
+                                catch (Exception e) {
+                                    out.print(e);
+                                }
+
+                            %>
+
+                        </p>
+
+
+                        <br>
+                        <br>
+                        <br>
+
+
+                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <br>
+                    </form>
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
 </section>

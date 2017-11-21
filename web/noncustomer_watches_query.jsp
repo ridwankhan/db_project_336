@@ -251,7 +251,6 @@ return mytime;
          out.print("</tr>");
 
 
-
         //parse out the results
         while (result.next()) {
             //make a row

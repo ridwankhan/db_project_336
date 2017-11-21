@@ -292,6 +292,36 @@
 
     </div>
     <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+
+                <div class="card-body">
+                    <h4 class="card-title" align="center">
+                        Let's get new people here
+                    </h4>
+
+                    <p align="center">Drinkers in the same state as your bar, but need you to grab their attention so you become their customer</p>
+                    <form method="post" action="noncustomer_watches_query.jsp" align="center">
+                        <table>
+
+                            <p>Bar: <%=barName%>
+                            </p>
+                        </table>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <br>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
 
 </section>

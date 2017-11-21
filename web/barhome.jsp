@@ -46,11 +46,8 @@
           </div>
           <div class="collapse navbar-collapse navbar-right" id="myNavbar">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#banner">Home</a></li>
-              <li class=""><a href="#service">Services</a></li>
+              <li class="active"><a href="./index.jsp">Home</a></li>
               <li class=""><a href="#about">About</a></li>
-              <li class=""><a href="#testimonial">Testimonial</a></li>
-              <li class=""><a href="#contact">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -63,7 +60,6 @@
             <img src="img/logo.png" class="img-responsive">
           </div>
           <div class="banner-text text-center">
-            <h1 class="white">Making your bar make business!</h1>
             <%
                 String entity = request.getParameter("bar");
                 out.print("<h1 class = \"white\" >");
@@ -72,10 +68,10 @@
 %>
 
 
-            <p>Bar Manager is your way of knowing the most about your customers and making more money</p>
+            <p>Navigate to any of our feature pages</p>
             <a href="./drinker_info.jsp?idJob=<%=entity%>" class="btn btn-appoint">Drinkers</a>
             <a href="./beers_info.jsp?idJob=<%=entity%>" class="btn btn-appoint">Beers</a>
-            <a href="./watches_info.jsp?idJob=<%=entity%>" class="btn btn-appoint">Watches</a>
+            <a href="./watches_info.jsp?idJob=<%=entity%>" class="btn btn-appoint">Advertising</a>
             <a href="./interested_info.jsp?idJob=<%=entity%>" class="btn btn-appoint">WingMan</a>
 
           </div>
@@ -92,9 +88,9 @@
     <div class="row">
       <div class="col-md-3 col-sm-4 col-xs-12">
         <div class="section-title">
-          <h2 class="head-title lg-line">The BarManager+ <br>Ultimate Dream</h2>
+          <h2 class="head-title lg-line">Features</h2>
           <hr class="botm-line">
-          <p class="sec-para">The team at BarManager+ has only one mission, and that is to have you understand your bar, your beers, and your drinkers.</p>
+          <p class="sec-para">We have created a number of types of information requests you can make on each of the following pages.</p>
         </div>
       </div>
       <div class="col-md-9 col-sm-8 col-xs-12">
@@ -102,15 +98,33 @@
           <div class="more-features-box-text">
             <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
             <div class="more-features-box-text-description">
-              <h3>See the important things</h3>
-              <p>BarManger+ gives users multiple kinds information requests to get different, useful information about their bar to maximize customer acquisition and service</p>
+              <h3>Drinkers</h3>
+              <p>Find out who your drinkers are, detailed information about them what beers they like, and even help getting potential customers.</p>
             </div>
           </div>
           <div class="more-features-box-text">
             <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
             <div class="more-features-box-text-description">
-              <h3>Quality Matters</h3>
-              <p>Just like in the bar business, quality matters. We are dedicated to having the highest quality website with clean and intuitive interface</p>
+              <h3>Beers</h3>
+              <p>Find what beers you sell and what price, manufacturers of your beers, what beers a customer likes,
+                beers you might want to start selling, and be able to update beer prices, add beers to sell, and stop selling some beers.</p>
+            </div>
+          </div>
+          <div class="more-features-box-text">
+            <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
+            <div class="more-features-box-text-description">
+              <h3>Advertising</h3>
+              <p>Manage your advertisements to TV channels by seeing when your customers are watching TV,
+                and which customers to advertise to and when and what channel to advertise to potential customers.</p>
+            </div>
+          </div>
+          <div class="more-features-box-text">
+            <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
+            <div class="more-features-box-text-description">
+              <h3>WingMan</h3>
+              <p>At BarManager+, we believe we are all here for one reason, and that is to find someone to grab a beer with.
+              That is why, with carefully recorded information about who people are interested, we allow bar owners to see who drinkers are interested in
+              so that they can ultimately get people interested in each other into the bar.fir</p>
             </div>
           </div>
         </div>

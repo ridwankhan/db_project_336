@@ -47,10 +47,7 @@
           <div class="collapse navbar-collapse navbar-right" id="myNavbar">
             <ul class="nav navbar-nav">
               <li class="active"><a href="#banner">Home</a></li>
-              <li class=""><a href="#service">Services</a></li>
               <li class=""><a href="#about">About</a></li>
-              <li class=""><a href="#testimonial">Testimonial</a></li>
-              <li class=""><a href="#contact">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -144,14 +141,14 @@
             <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
             <div class="more-features-box-text-description">
               <h3>See the important things</h3>
-              <p>BarManger+ gives users multiple kinds information requests to get different, useful information about their bar to maximize customer acquisition and service</p>
+              <p>BarManger+ gives users multiple kinds information requests to get different, useful information about their bar and customers to maximize customer acquisition and service</p>
             </div>
           </div>
           <div class="more-features-box-text">
             <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
             <div class="more-features-box-text-description">
               <h3>Quality Matters</h3>
-              <p>Just like in the bar business, quality matters. We are dedicated to having the highest quality website with clean and intuitive interface</p>
+              <p>Just like in the bar business, quality matters. We are dedicated to having the highest quality website with clean and simple interface</p>
             </div>
           </div>
         </div>

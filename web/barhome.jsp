@@ -76,6 +76,7 @@
             <a href="./drinker_info.jsp?idJob=<%=entity%>" class="btn btn-appoint">Drinkers</a>
             <a href="./beers_info.jsp?idJob=<%=entity%>" class="btn btn-appoint">Beers</a>
             <a href="./watches_info.jsp?idJob=<%=entity%>" class="btn btn-appoint">Watches</a>
+            <a href="./interested_info.jsp?idJob=<%=entity%>" class="btn btn-appoint">WingMan</a>
 
           </div>
           <div class="overlay-detail text-center">

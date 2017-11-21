@@ -14,7 +14,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Watches</title>
+    <title>Advertisement</title>
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
     <meta name="keywords"
           content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
@@ -63,9 +63,16 @@
 
 <section>
     <h1 align="center">Advertisement Information</h1>
+    <p align ="center">
     <%
         String barName = request.getParameter("idJob");
         session.setAttribute("ob", barName);
+
+
+        out.print(barName);
+        out.print("</p>");
+
+
 
         try {
             //Get the database connection
@@ -103,8 +110,8 @@
                     <form method="post" action="whos_watching_query.jsp" align="center">
                         <table>
 
-                            <p>Bar: <%=barName%>
-                            </p>
+                            <%--<p>Bar: <%=barName%>--%>
+                            <%--</p>--%>
                         </table>
                         <p style="float:left;margin-left:25px;">Time: &nbsp
                             <select name="time" size=1>
@@ -196,7 +203,7 @@
                         <br>
                         <br>
                         <br>
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <input type="submit" value="Submit" class="btn btn-appoint" style="float: left; margin-left:25px">
                         <br>
                     </form>
                 </div>
@@ -210,12 +217,12 @@
                         How to advertise to a certain customer
                     </h4>
 
-                    <p align="center">Get when and what channel to advertise to a specific drinker</p>
+                    <p align="center">Get when and what channel a specfic drinker of yours watches</p>
                     <form method="post" action="drinker_watches_query.jsp" align="center">
                         <table>
 
-                            <p>Bar: <%=barName%>
-                            </p>
+                            <%--<p>Bar: <%=barName%>--%>
+                            <%--</p>--%>
                         </table>
                         <p style="float:left;margin-left:25px;">Name:
                             <select name="drinker" size=1>
@@ -259,7 +266,9 @@
                         <br>
                         <br>
                         <br>
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <br>
+                        <br>
+                        <input type="submit" value="Submit"  class="btn btn-appoint" style="float: left; margin-left:25px">
                         <br>
                     </form>
                 </div>
@@ -277,15 +286,18 @@
                     <form method="post" action="infrequent_watches_query.jsp" align="center">
                         <table>
 
-                            <p>Bar: <%=barName%>
-                            </p>
+                            <%--<p>Bar: <%=barName%>--%>
+                            <%--</p>--%>
                         </table>
 
                         <br>
                         <br>
                         <br>
                         <br>
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <br>
+                        <br>
+                        <br>
+                        <input type="submit" value="Submit" class="btn btn-appoint" style="float: left; margin-left:25px">
                         <br>
                     </form>
                 </div>
@@ -307,15 +319,42 @@
                     <form method="post" action="noncustomer_watches_query.jsp" align="center">
                         <table>
 
-                            <p>Bar: <%=barName%>
-                            </p>
+                            <%--<p>Bar: <%=barName%>--%>
+                            <%--</p>--%>
+                        </table>
+
+
+                        <br>
+                        <br>
+                        <input type="submit" value="Submit" class="btn btn-appoint" style="float: left; margin-left:25px">
+                        <br>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+
+                <div class="card-body">
+                    <h4 class="card-title" align="center">
+                        Patterns
+                    </h4>
+
+                    <p align="center">Click below to see the Time vs. Age graph</p>
+                    <form method="post" action="newRandomChart.jsp" align="center">
+                        <table>
+                            <%--<p>Bar: <%=barName%>--%>
+                            <%--</p>--%>
                         </table>
 
                         <br>
                         <br>
                         <br>
                         <br>
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+
+
+                        <input type="submit" value="Submit" class="btn btn-appoint" style="float: left; margin-left:25px">
                         <br>
                     </form>
                 </div>

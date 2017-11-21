@@ -63,9 +63,12 @@
 
 <section>
     <h1 align="center">Beer Information</h1>
+    <p align="center">
     <%
         String barName = request.getParameter("idJob");
         session.setAttribute("ob", barName);
+        out.print(barName);
+        out.print("</p>");
 
         try {
             //Get the database connection
@@ -103,8 +106,8 @@
                     <form method="post" action="beer_sells_query.jsp" align="center">
                         <table>
 
-                            <p>Bar: <%=barName%>
-                            </p>
+                            <%--<p>Bar: <%=barName%>--%>
+                            <%--</p>--%>
                         </table>
                         <p style="float:left;margin-left:25px;">Order By: &nbsp
                             <select name="order" size=1>
@@ -124,7 +127,7 @@
                         <br>
                         <br>
                         <br>
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <input type="submit" value="Submit" class="btn btn-appoint" style="float: left; margin-left:25px">
                         <br>
                     </form>
                 </div>
@@ -142,8 +145,8 @@
                     <form method="post" action="who_likes_query.jsp" align="center">
                         <table>
 
-                            <p>Bar: <%=barName%>
-                            </p>
+                            <%--<p>Bar: <%=barName%>--%>
+                            <%--</p>--%>
                         </table>
                         <p style="float:left;margin-left:25px;">Name:
                             <select name="beer" size=1>
@@ -177,7 +180,7 @@
                         <br>
                         <br>
                         <br>
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <input type="submit" value="Submit" class="btn btn-appoint" style="float: left; margin-left:25px">
                         <br>
                     </form>
                 </div>
@@ -195,15 +198,15 @@
                     <form method="post" action="not_sell_beer.jsp" align="center">
                         <table>
 
-                            <p>Bar: <%=barName%>
-                            </p>
+                            <%--<p>Bar: <%=barName%>--%>
+                            <%--</p>--%>
                         </table>
 
                         <br>
                         <br>
                         <br>
                         <br>
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <input type="submit" value="Submit" class="btn btn-appoint" style="float: left; margin-left:25px">
                         <br>
                     </form>
                 </div>
@@ -225,7 +228,7 @@
                     <form method="post" action="updatedBeer.jsp" align="center">
 
 
-                            <p>Bar: <%=barName%></p>
+                            <%--<p>Bar: <%=barName%></p>--%>
 
                         <p style="float:left;margin-left:25px;">Beer:
                                 <select name="beer2" size=1>
@@ -257,7 +260,7 @@
                         <br>
 
 
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <input type="submit" value="Submit" class="btn btn-appoint" style="float: left; margin-left:25px">
                         <br>
                     </form>
 
@@ -277,7 +280,7 @@
                     <form method="post" action="newBeer.jsp" align="center">
 
 
-                            <p>Bar: <%=barName%></p>
+                            <%--<p>Bar: <%=barName%></p>--%>
 
                         <p style="float:left;margin-left:25px;">Beer: <input type="text" name="beer1"></p>
 
@@ -285,8 +288,9 @@
 
                         <br>
                         <br>
-
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <br>
+                        <br>
+                        <input type="submit" value="Submit" class="btn btn-appoint" style="float: left; margin-left:25px">
                         <br>
                     </form>
 
@@ -309,7 +313,7 @@
                     <form method="post" action="deletedBeer.jsp" align="center">
 
 
-                        <p>Bar: <%=barName%></p>
+                        <%--<p>Bar: <%=barName%></p>--%>
 
                         <p style="float:left;margin-left:25px;">Beer:
                             <select name="beer3" size=1>
@@ -345,7 +349,7 @@
                         <br>
 
 
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <input type="submit" value="Submit" class="btn btn-appoint" style="float: left; margin-left:25px">
                         <br>
                     </form>
 

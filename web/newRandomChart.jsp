@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Potential Customers</title>
+    <title>Pattern Information</title>
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
     <meta name="keywords"
           content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
@@ -26,9 +26,13 @@
 <section id="service" class="section-padding">
     <div class="container" align='center'>
 
-        <h2 class="ser-title">Update Information</h2>
+        <h2 class="ser-title">Pattern Information</h2>
         <hr class="botm-line">
-
+        <p style="float:left;margin-left:25px;">Pattern Description: Our pattern involves biasing people's ages and the time they would watch TV. The pattern is:
+            People between the ages of 65 and 90 only watch tv between 10 am and 8pm.
+            People between the ages of 30 and 65 only watch tv between 8pm and 12 am.
+            People between the ages of 21 and 30 only watch tv between 8pm and 3am.
+            This is across all our drinkers in the database
         <div id="chart">
 
         </div>

@@ -63,9 +63,12 @@
 
 <section>
     <h1 align="center">Be the WingMan</h1>
+    <p align="center">
     <%
         String barName = request.getParameter("idJob");
         session.setAttribute("ob", barName);
+        out.print(barName);
+        out.print("</p>");
 
         try {
             //Get the database connection
@@ -98,10 +101,10 @@
                     <form method="post" action="interested_query.jsp" align="center">
                         <table>
 
-                            <p>Bar: <%=barName%>
-                            </p>
+                            <%--<p>Bar: <%=barName%>--%>
+                            <%--</p>--%>
                         </table>
-                        <p style="float:left;margin-left:25px;">Customer at Bar:
+                        <p style="float:left;margin-left:25px;">Customer at your Bar:
                         <select name="drinker" size=1>
                             <%
                                 while(rs.next())
@@ -122,12 +125,12 @@
 
                         </p>
 
-                        <br>
+
+
 
                         <br>
                         <br>
-                        <br>
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <input type="submit" value="Submit" class="btn btn-appoint"  style="float: left; margin-left:25px">
                         <br>
                     </form>
                 </div>
@@ -141,12 +144,12 @@
                         Interested in who?
                     </h4>
 
-                    <p align="center">Find out who your customer is interested in. May the can get other drinkers to come into the bar.</p>
+                    <p align="center">Find out who your customer is interested in. Maybe they can get other drinkers to come into the bar.</p>
                     <form method="post" action="interest_who_query.jsp" align="center">
                         <table>
 
-                            <p>Bar: <%=barName%>
-                            </p>
+                            <%--<p>Bar: <%=barName%>--%>
+                            <%--</p>--%>
                         </table>
                         <p style="float:left;margin-left:25px;">Customer:
                             <select name="drinker" size=1>
@@ -180,7 +183,7 @@
                         <br>
                         <br>
                         <br>
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <input type="submit" value="Submit" class="btn btn-appoint"  style="float: left; margin-left:25px">
                         <br>
                     </form>
                 </div>
@@ -198,15 +201,15 @@
                     <form method="post" action="matches_query.jsp" align="center">
                         <table>
 
-                            <p>Bar: <%=barName%>
-                            </p>
+                            <%--<p>Bar: <%=barName%>--%>
+                            <%--</p>--%>
                         </table>
 
                         <br>
                         <br>
                         <br>
-                        <br>
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+
+                        <input type="submit" value="Submit" class="btn btn-appoint"  style="float: left; margin-left:25px">
                         <br>
                     </form>
                 </div>

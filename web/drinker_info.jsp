@@ -63,10 +63,12 @@
 
 <section>
     <h1 align="center">Drinker Information</h1>
+    <p align="center">
     <%
         String barName = request.getParameter("idJob");
         session.setAttribute("ob", barName);
-
+        out.print(barName);
+        out.print("</p>");
         try {
             //Get the database connection
             ApplicationDB db = new ApplicationDB();
@@ -115,7 +117,8 @@
                         <br>
                         <br>
                         <br>
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <br>
+                        <input type="submit" value="Submit" class="btn btn-appoint" style="float: left; margin-left:25px">
                         <br>
                     </form>
                 </div>
@@ -175,7 +178,7 @@
                         <br>
                         <br>
                         <br>
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <input type="submit" value="Submit" class="btn btn-appoint" style="float: left; margin-left:25px">
                         <br>
                     </form>
                 </div>
@@ -201,7 +204,7 @@
                         <br>
                         <br>
                         <br>
-                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <input type="submit" value="Submit" class="btn btn-appoint" style="float: left; margin-left:25px">
                         <br>
                     </form>
                 </div>

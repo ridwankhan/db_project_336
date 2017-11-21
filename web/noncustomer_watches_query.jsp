@@ -22,7 +22,7 @@
 <section id="service" class="section-padding">
     <div class="container" align='center'>
 
-        <h2 class="ser-title">Get infrequent Customers to return by advertising to them</h2>
+        <h2 class="ser-title">Advertise to get new customers</h2>
         <hr class="botm-line">
             <%!
 
@@ -210,7 +210,7 @@ return mytime;
        String order = request.getParameter("order");
 
 
-        String str = "SELECT * FROM watches w JOIN frequents f WHERE w.name = f.drinker AND f.bar = '"+ barName+ "' ORDER BY frequency asc";
+        String str = "SELECT * FROM watches w JOIN drinkers d ON w.name = d.name WHERE w.name NOT IN (SELECT f.drinker from frequents f WHERE f.bar='"+barName+"') AND d.state IN (Select b.state FROM bars b where b.name = '"+barName+"')";
         out.print(str);
 
         //Run the query against the database.
@@ -242,11 +242,7 @@ return mytime;
         out.print("Channel");
         out.print("</td>");
 
-         out.print("<td>");
-        //print out column header
-        out.print("Frequency");
-        out.print("</td>");
-        //make a column
+
 
          out.print("</tr>");
 
@@ -271,11 +267,6 @@ return mytime;
              out.print("<td>");
             out.print(result.getString("channel"));
             out.print("</td>");
-
-             out.print("<td>");
-            out.print(result.getString("frequency"));
-            out.print("</td>");
-
 
 
             out.print("</tr>");

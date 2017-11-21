@@ -14,7 +14,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Drinkers</title>
+    <title>WingMan</title>
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
     <meta name="keywords"
           content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
@@ -62,7 +62,7 @@
 <br>
 
 <section>
-    <h1 align="center">Drinker Information</h1>
+    <h1 align="center">Be the WingMan</h1>
     <%
         String barName = request.getParameter("idJob");
         session.setAttribute("ob", barName);
@@ -71,15 +71,18 @@
             //Get the database connection
             ApplicationDB db = new ApplicationDB();
             Connection con = db.getConnection();
+            Connection con2 = db.getConnection();
 
             //Create a SQL statement
             Statement stmt = con.createStatement();
+            Statement stmt2 = con2.createStatement();
 
             String entity = request.getParameter("command");
 
             String str = "SELECT drinker FROM frequents WHERE bar = '"+barName+"'"+" ORDER BY drinker";
             //Run the query against the database.
             ResultSet rs = stmt.executeQuery(str);
+            ResultSet rs2 = stmt2.executeQuery(str);
 
     %>
 
@@ -88,30 +91,39 @@
             <div class="card h-100">
                 <div class="card-body">
                     <h4 class="card-title" align="center">
-                        All Your Drinkers
+                        Who's interested?
                     </h4>
 
-                    <p align="center">Get Information About All Your Drinkers</p>
-                    <form method="post" action="drinker_detail_query.jsp" align="center">
+                    <p align="center">Find drinkers interested in the customer that just entered your bar. Maybe they will want to stop by and have a talk and more importantly, a beer. This is great way to attract new and old customers</p>
+                    <form method="post" action="interested_query.jsp" align="center">
                         <table>
 
                             <p>Bar: <%=barName%>
                             </p>
                         </table>
-                        <p style="float:left;margin-left:25px;">Order By: &nbsp
-                            <select name="order" size=1>
-                                <option value="ORDER BY frequency ASC">Ascending Frequency</option>
-                                <option value="ORDER BY frequency DESC">Descending Frequency</option>
-                                <option value="ORDER BY drinker">Alphabetical Order</option>
-                            </select>
+                        <p style="float:left;margin-left:25px;">Customer at Bar:
+                        <select name="drinker" size=1>
+                            <%
+                                while(rs.next())
+                                {
+                                    String fname = rs.getString("drinker");
+                            %>
+
+                            <option value="<%=fname %>"><%=fname %></option>
+
+                            <%
+                                }
+                                con.close();
+
+                            %>
+
+                        </select>
+
+
                         </p>
+
                         <br>
-                        <p style="float:left;margin-left:25px;">Detailed Info?&nbsp
-                            <select name="dets" size="1">
-                                <option value="TRUE">Yes</option>
-                                <option value="FALSE">No</option>
-                            </select>
-                        </p>
+
                         <br>
                         <br>
                         <br>
@@ -126,29 +138,29 @@
 
                 <div class="card-body">
                     <h4 class="card-title" align="center">
-                        Specific Drinker
+                        Interested in who?
                     </h4>
 
-                    <p align="center">Get the Information about a particular drinker, and what they like to drink</p>
-                    <form method="post" action="specific_drinker_query.jsp" align="center">
+                    <p align="center">Find out who your customer is interested in. May the can get other drinkers to come into the bar.</p>
+                    <form method="post" action="interest_who_query.jsp" align="center">
                         <table>
 
                             <p>Bar: <%=barName%>
                             </p>
                         </table>
-                        <p style="float:left;margin-left:25px;">Name:
+                        <p style="float:left;margin-left:25px;">Customer:
                             <select name="drinker" size=1>
                                 <%
-                                    while(rs.next())
+                                    while(rs2.next())
                                     {
-                                        String fname = rs.getString("drinker");
+                                        String fname = rs2.getString("drinker");
                                 %>
 
                                 <option value="<%=fname %>"><%=fname %></option>
 
                                 <%
                                     }
-                                    con.close();
+                                    con2.close();
 
                                 %>
 
@@ -162,14 +174,7 @@
 
                             %>
                         </p>
-                        <p style="float:left;margin-left:25px;">Order By:
-                            <select name ="order" size =1>
-                                <option value="ORDER BY rating ASC">Ascending rating</option>
-                                <option value="ORDER BY rating DESC">Descending rating</option>
-                                <option value="ORDER BY beer">Alphabetical Order</option>
 
-                            </select>
-                        </p>
 
                         <br>
                         <br>
@@ -186,11 +191,11 @@
 
                 <div class="card-body">
                     <h4 class="card-title" align="center">
-                        Possible Customers
+                        Matches made in Bar Heaven
                     </h4>
 
-                    <p align="center">Customers who are in the same state as your bar, but aren't your customers, yet.</p>
-                    <form method="post" action="noncustomer_query.jsp" align="center">
+                    <p align="center">Find two people interested in each other who frequent your bar. Call them both in, have them grab some beers and watch the magic unfold</p>
+                    <form method="post" action="matches_query.jsp" align="center">
                         <table>
 
                             <p>Bar: <%=barName%>

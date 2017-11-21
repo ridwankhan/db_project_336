@@ -44,7 +44,7 @@
         String order = request.getParameter("order");
 
         String str = "SELECT l.drinker, l.beer, l.rating FROM likes l JOIN frequents f ON f.drinker = l.drinker WHERE bar = '"+barName+"' AND beer= '"+beer+"' "+order;
-        out.print(str);
+        //out.print(str);
 
         //Run the query against the database.
         ResultSet result = stmt.executeQuery(str);

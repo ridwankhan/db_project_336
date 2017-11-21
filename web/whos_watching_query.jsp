@@ -25,6 +25,170 @@
         <h2 class="ser-title">Who is watching?</h2>
         <hr class="botm-line">
 
+            <%!
+
+public String getTime(String i){
+
+String mytime;
+
+        if (i.equals("0")) mytime = "12:00 AM";
+
+
+        else if (i.equals("0.5")) mytime = "12:30 AM";
+
+
+         else if (i.equals("1")) mytime = "1:00 AM";
+
+
+         else if (i.equals("1.5")) mytime = "1:30 AM";
+
+
+         else if (i.equals("2")) mytime = "2:00 AM";
+
+
+         else if (i.equals("2.5")) mytime = "2:30 AM";
+
+
+
+         else if (i.equals("3")) mytime = "3:00 AM";
+
+
+         else if (i.equals("3.5")) mytime = "3:30 AM";
+
+
+         else if (i.equals("4")) mytime = "4:00 AM";
+
+
+         else if (i.equals("4.5")) mytime = "4:30 AM";
+
+
+        else if (i.equals("5")) mytime = "5:00 AM";
+
+
+         else if (i.equals("5.5")) mytime = "5:30 AM";
+
+
+
+         else if (i.equals("6")) mytime = "6:00 AM";
+
+
+         else if (i.equals("6.5")) mytime = "6:30 AM";
+
+         else if (i.equals("7")) mytime = "7:00 AM";
+
+
+         else if (i.equals("7.5")) mytime = "7:30 AM";
+
+
+         else if (i.equals("8")) mytime = "8:00 AM";
+
+
+         else if (i.equals("8.5")) mytime = "8:30 AM";
+
+
+
+         else if (i.equals("9")) mytime = "9:00 AM";
+
+
+         else if (i.equals("9.5")) mytime = "9:30 AM";
+
+         else if (i.equals("10")) mytime = "10:00 AM";
+
+
+         else if (i.equals("10.5")) mytime = "10:30 AM";
+
+
+         else if (i.equals("11")) mytime = "11:00 AM";
+
+
+         else if (i.equals("11.5")) mytime = "11:30 AM";
+
+
+
+         else if (i.equals("12")) mytime = "12:00 PM";
+
+
+         else if (i.equals("12.5")) mytime = "12:30 PM";
+
+
+          else if (i.equals("13")) mytime = "1:00 PM";
+
+
+         else if (i.equals("13.5")) mytime = "1:30 AM";
+
+
+
+         else if (i.equals("14")) mytime = "2:00 PM";
+
+
+         else if (i.equals("14.5")) mytime = "2:30 PM";
+
+
+          else if (i.equals("15")) mytime = "3:00 PM";
+
+
+         else if (i.equals("15.5")) mytime = "3:30 PM";
+
+
+
+         else if (i.equals("16")) mytime = "4:00 PM";
+
+
+         else if (i.equals("16.5")) mytime = "4:30 PM";
+
+
+          else if (i.equals("17")) mytime = "5:00 PM";
+
+
+         else if (i.equals("17.5")) mytime = "5:30 PM";
+
+
+
+         else if (i.equals("18")) mytime = "6:00 PM";
+
+
+         else if (i.equals("18.5")) mytime = "6:30 PM";
+
+
+          else if (i.equals("19")) mytime = "7:00 PM";
+
+
+         else if (i.equals("19.5")) mytime = "7:30 PM";
+
+
+
+         else if (i.equals("20")) mytime = "8:00 PM";
+
+
+         else if (i.equals("20.5")) mytime = "8:30 PM";
+
+         else if (i.equals("21")) mytime = "9:00 PM";
+
+
+         else if (i.equals("21.5")) mytime = "9:30 PM";
+
+
+
+         else if (i.equals("22")) mytime = "10:00 PM";
+
+
+         else if (i.equals("22.5")) mytime = "10:30 PM";
+
+
+         else if (i.equals("23")) mytime = "11:00 PM";
+
+
+         else if (i.equals("23.5")) mytime = "11:30 PM";
+
+
+      else {
+          mytime = "8:00 PM";
+      }
+
+
+return mytime;
+}
+
             <%
                 String barName = (String) session.getAttribute("ob");
 %>
@@ -81,10 +245,10 @@
         //make a column
 
          out.print("</tr>");
-
-         if(result.next()==false){
-             out.print("None of your drinkers watch this channel at this time and day");
-         }
+//
+//         if(result.next()==false){
+//             out.print("None of your drinkers watch this channel at this time and day");
+//         }
 
         //parse out the results
         while (result.next()) {
@@ -96,7 +260,7 @@
             out.print("</td>");
 
              out.print("<td>");
-            out.print(result.getString("time"));
+            out.print(getTime(result.getString("time")));
             out.print("</td>");
 
              out.print("<td>");

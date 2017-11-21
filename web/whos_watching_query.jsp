@@ -188,7 +188,7 @@ String mytime;
 
 return mytime;
 }
-
+%>
             <%
                 String barName = (String) session.getAttribute("ob");
 %>

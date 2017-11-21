@@ -46,7 +46,8 @@
           </div>
           <div class="collapse navbar-collapse navbar-right" id="myNavbar">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="./index.jsp">Home</a></li>
+              <li class="active"><a href="./index.jsp">Login</a></li>
+              <li class="active"><a href="#banner">Home</a></li>
               <li class=""><a href="#about">About</a></li>
             </ul>
           </div>

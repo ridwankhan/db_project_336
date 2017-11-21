@@ -47,11 +47,7 @@
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#banner">Home</a></li>
-                    <li class=""><a href="#service">Services</a></li>
-                    <li class=""><a href="#about">About</a></li>
-                    <li class=""><a href="#testimonial">Testimonial</a></li>
-                    <li class=""><a href="#contact">Contact</a></li>
+                    <%--<li class="active"><a href="./index.jsp">Login</a></li>--%>
                 </ul>
             </div>
         </div>
@@ -324,6 +320,9 @@
                                 <%
                                     }
                                     con.close();
+                                    con2.close();
+                                    con3.close();
+
 
                                 %>
 

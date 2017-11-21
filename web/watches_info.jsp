@@ -303,7 +303,7 @@
                         Let's get new people here
                     </h4>
 
-                    <p align="center">Drinkers in the same state as your bar, but need you to grab their attention so you become their customer</p>
+                    <p align="center">Drinkers in the same state as your bar, but need you to grab their attention so they become your customer</p>
                     <form method="post" action="noncustomer_watches_query.jsp" align="center">
                         <table>
 

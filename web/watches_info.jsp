@@ -106,7 +106,7 @@
                             <p>Bar: <%=barName%>
                             </p>
                         </table>
-                        <p style="float:left;margin-left:25px;">Order By: &nbsp
+                        <p style="float:left;margin-left:25px;">Time: &nbsp
                             <select name="time" size=1>
                                 <option value=0.0>12:00 AM</option>
                                 <option value=0.5>12:30 AM</option>
@@ -210,7 +210,7 @@
                     </h4>
 
                     <p align="center">Get when and what channel to advertise to a specific drinker</p>
-                    <form method="post" action="who_likes_query.jsp" align="center">
+                    <form method="post" action="drinker_watches_query.jsp" align="center">
                         <table>
 
                             <p>Bar: <%=barName%>
@@ -244,10 +244,10 @@
                         <br>
                         <p style="float:left;margin-left:25px;">Order By:
                             <select name ="order" size =1>
-                                <option value="ORDER BY drinker">Drinker</option>
+
                                 <option value="ORDER BY channel">Channel</option>
-                                <option value="ORDER BY day">Channel</option>
-                                <option value="ORDER BY time">Channel</option>
+                                <option value="ORDER BY day">Day</option>
+                                <option value="ORDER BY time">Time</option>
 
 
                             </select>
@@ -268,11 +268,11 @@
 
                 <div class="card-body">
                     <h4 class="card-title" align="center">
-                        Possible New Beers
+                        Let's Get Them Coming
                     </h4>
 
-                    <p align="center">Beers You Don't Sell, but your customers like</p>
-                    <form method="post" action="noncustomer_query.jsp" align="center">
+                    <p align="center">Drinkers that haven't been coming often and you want to advertise to them</p>
+                    <form method="post" action="infrequent_watches_query.jsp" align="center">
                         <table>
 
                             <p>Bar: <%=barName%>
@@ -292,6 +292,36 @@
 
     </div>
     <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+
+                <div class="card-body">
+                    <h4 class="card-title" align="center">
+                        Let's get new people here
+                    </h4>
+
+                    <p align="center">Drinkers in the same state as your bar, but need you to grab their attention so you become their customer</p>
+                    <form method="post" action="noncustomer_watches_query.jsp" align="center">
+                        <table>
+
+                            <p>Bar: <%=barName%>
+                            </p>
+                        </table>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <input type="submit" value="Submit" style="float: left; margin-left:25px">
+                        <br>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
 
 </section>

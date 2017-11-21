@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Drinker Watches</title>
+    <title>Infrequent Watchers</title>
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
     <meta name="keywords"
           content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
@@ -22,7 +22,7 @@
 <section id="service" class="section-padding">
     <div class="container" align='center'>
 
-        <h2 class="ser-title">What They Watch</h2>
+        <h2 class="ser-title">Get infrequent Customers to return by advertising to them</h2>
         <hr class="botm-line">
             <%!
 
@@ -210,7 +210,7 @@ return mytime;
        String order = request.getParameter("order");
 
 
-        String str = "SELECT * FROM watches WHERE name= '"+drinker+"' "+order;
+        String str = "SELECT * FROM watches w JOIN frequents f WHERE w.name = f.drinker AND f.bar = '"+ barName+ "' ORDER BY frequency asc";
         out.print(str);
 
         //Run the query against the database.
@@ -241,13 +241,16 @@ return mytime;
         //print out column header
         out.print("Channel");
         out.print("</td>");
+
+         out.print("<td>");
+        //print out column header
+        out.print("Frequency");
+        out.print("</td>");
         //make a column
 
          out.print("</tr>");
 
-         if(result.next()==false){
-             out.print("They don't watch anything");
-         }
+
 
         //parse out the results
         while (result.next()) {
@@ -268,6 +271,10 @@ return mytime;
 
              out.print("<td>");
             out.print(result.getString("channel"));
+            out.print("</td>");
+
+             out.print("<td>");
+            out.print(result.getString("frequency"));
             out.print("</td>");
 
 

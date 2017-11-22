@@ -211,7 +211,7 @@ return mytime;
 
 
         String str = "SELECT * FROM watches WHERE name= '"+drinker+"' "+order;
-        out.print(str);
+        //out.print(str);
 
         //Run the query against the database.
         ResultSet result = stmt.executeQuery(str);

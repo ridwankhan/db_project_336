@@ -52,10 +52,12 @@
         else{
              str = "SELECT * FROM sells WHERE bar= '"+barName+"' "+order;
              }
-        out.print(str);
+        //out.print(str);
 
         //Run the query against the database.
         ResultSet result = stmt.executeQuery(str);
+
+        out.print("<p>Note: Rating of: 1 - kind of likes, 2-likes,3-really likes</p>");
 
         //Make an HTML table to show the results in:
         out.print("<table>");

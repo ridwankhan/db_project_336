@@ -44,7 +44,7 @@
         String drinker = request.getParameter("drinker");
 
         String str = "SELECT * FROM interested WHERE name = '"+drinker+"'";
-        out.print(str);
+        //out.print(str);
 
         //Run the query against the database.
         ResultSet result = stmt.executeQuery(str);

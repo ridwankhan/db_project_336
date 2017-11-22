@@ -211,7 +211,7 @@ return mytime;
 
 
         String str = "SELECT * FROM watches w JOIN frequents f WHERE w.name = f.drinker AND f.bar = '"+ barName+ "' ORDER BY frequency asc";
-        out.print(str);
+        //out.print(str);
 
         //Run the query against the database.
         ResultSet result = stmt.executeQuery(str);

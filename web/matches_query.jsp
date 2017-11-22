@@ -44,7 +44,7 @@
         String drinker = request.getParameter("drinker");
 
         String str = "SELECT DISTINCT (name), interest FROM interested i JOIN frequents f ON i.name = f.drinker JOIN frequents f2 ON f2.bar = f.bar WHERE f.bar = '"+barName+"' AND i.interest = f2.drinker";
-        out.print(str);
+        //out.print(str);
 
         //Run the query against the database.
         ResultSet result = stmt.executeQuery(str);

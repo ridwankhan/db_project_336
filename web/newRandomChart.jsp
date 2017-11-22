@@ -32,7 +32,8 @@
             People between the ages of 65 and 90 only watch tv between 10 am and 8pm.
             People between the ages of 30 and 65 only watch tv between 8pm and 12 am.
             People between the ages of 21 and 30 only watch tv between 8pm and 3am.
-            This is across all our drinkers in the database
+            This is across all our drinkers in the database.
+            As you can see from the plot below, our pattern is verified.
         <div id="chart">
 
         </div>

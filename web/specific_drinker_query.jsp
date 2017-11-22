@@ -51,6 +51,7 @@
         ResultSet result = stmt.executeQuery(str);
 
         //Make an HTML table to show the results in:
+        out.print("<p>Note: Rating of: 1 - kind of likes, 2-likes,3-really likes</p>");
         out.print("<table>");
 
         //make a row
@@ -172,6 +173,7 @@
         out.print("<br><br>");
          Connection con2 = db.getConnection();
         String str2 = "SELECT beer,rating FROM likes WHERE drinker = '"+drinker+"' " + order;
+        //out.print(str2);
 
         Statement stmt2 = con2.createStatement();
 

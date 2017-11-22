@@ -93,8 +93,8 @@
                     <form method="post" action="drinker_detail_query.jsp" align="center">
                         <table>
 
-                            <p>Bar: <%=barName%>
-                            </p>
+                            <%--<p>Bar: <%=barName%>--%>
+                            <%--</p>--%>
                         </table>
                         <p style="float:left;margin-left:25px;">Order By: &nbsp
                             <select name="order" size=1>
@@ -132,8 +132,8 @@
                     <form method="post" action="specific_drinker_query.jsp" align="center">
                         <table>
 
-                            <p>Bar: <%=barName%>
-                            </p>
+                            <%--<p>Bar: <%=barName%>--%>
+                            <%--</p>--%>
                         </table>
                         <p style="float:left;margin-left:25px;">Name:
                             <select name="drinker" size=1>
@@ -192,8 +192,8 @@
                     <form method="post" action="noncustomer_query.jsp" align="center">
                         <table>
 
-                            <p>Bar: <%=barName%>
-                            </p>
+                            <%--<p>Bar: <%=barName%>--%>
+                            <%--</p>--%>
                         </table>
 
                         <br>

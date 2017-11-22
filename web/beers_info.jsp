@@ -72,21 +72,26 @@
             Connection con = db.getConnection();
             Connection con2 = db.getConnection();
             Connection con3 = db.getConnection();
+            Connection con4 = db.getConnection();
 
             //Create a SQL statement
             Statement stmt = con.createStatement();
             Statement stmt2 = con2.createStatement();
             Statement stmt3 = con3.createStatement();
+            Statement stmt4 = con4.createStatement();
 
             String entity = request.getParameter("command");
 
             String str = "SELECT beer FROM sells WHERE bar = '"+barName+"'"+" ORDER BY beer";
             String str2 = "SELECT beer FROM sells WHERE bar = '"+barName+"'"+" ORDER BY beer";
             String str3 = "SELECT beer FROM sells WHERE bar = '"+barName+"'"+" ORDER BY beer";
+            String str4 = "SELECT beer FROM sells WHERE bar = '"+barName+"'"+" ORDER BY beer";
+
             //Run the query against the database.
             ResultSet rs = stmt.executeQuery(str);
             ResultSet rs2 = stmt2.executeQuery(str2);
             ResultSet rs3 = stmt3.executeQuery(str3);
+            ResultSet rs4 = stmt4.executeQuery(str4);
 
     %>
 
@@ -323,22 +328,14 @@
 
                                 <%
                                     }
-                                    con.close();
-                                    con2.close();
-                                    con3.close();
+
 
 
                                 %>
 
                             </select>
 
-                            <%
-                                }
-                                catch (Exception e) {
-                                    out.print(e);
-                                }
 
-                            %>
 
                         </p>
 
@@ -357,6 +354,89 @@
                 </div>
             </div>
         </div>
+
+    <div class="row">
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title" align="center">
+                        Beer Price Pattern Statistics
+                    </h4>
+
+
+                    <form method="post" action="pricePatternStatsChart.jsp" align="center">
+
+
+                        <%--<p>Bar: <%=barName%></p>--%>
+
+                        <p style="float:left;margin-left:25px;">Beer:
+                            <select name="beer4" size=1>
+                                <%
+                                    while(rs4.next())
+                                    {
+                                        String fname = rs4.getString("beer");
+                                %>
+
+                                <option value="<%=fname %>"><%=fname %></option>
+
+                                <%
+                                    }
+
+                                    con.close();
+                                    con2.close();
+                                    con3.close();
+                                    con4.close();
+
+                                %>
+
+                            </select>
+
+                            <%
+                                }
+                                catch (Exception e) {
+                                    out.print(e);
+                                }
+
+                            %>
+                        </p>
+                        <br>
+
+
+                        <br>
+                        <br>
+                        <br>
+
+
+                        <input type="submit" value="Submit" class="btn btn-appoint" style="float: left; margin-left:25px">
+                        <br>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+
+                <div class="card-body">
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+
+                <div class="card-body">
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     </div>
 

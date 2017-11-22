@@ -50,7 +50,7 @@
 
         //Run the query against the database.
         ResultSet result = stmt.executeQuery(str);
-        out.print(str);
+       // out.print(str);
 
         //Make an HTML table to show the results in:
         out.print("<p>Notes: Tolerance is an index to indicate how much alcohol a drinker can consume before passing out on a scale of 1-30.</p>");

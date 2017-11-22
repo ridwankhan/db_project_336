@@ -211,7 +211,7 @@ return mytime;
 
 
         String str = "SELECT * FROM watches w JOIN drinkers d ON w.name = d.name WHERE w.name NOT IN (SELECT f.drinker from frequents f WHERE f.bar='"+barName+"') AND d.state IN (Select b.state FROM bars b where b.name = '"+barName+"')";
-        out.print(str);
+       // out.print(str);
 
         //Run the query against the database.
         ResultSet result = stmt.executeQuery(str);

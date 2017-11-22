@@ -50,6 +50,7 @@
 
         //Run the query against the database.
         ResultSet result = stmt.executeQuery(str);
+        out.print(str);
 
         //Make an HTML table to show the results in:
         out.print("<table>");
